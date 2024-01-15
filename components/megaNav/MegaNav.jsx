@@ -1,9 +1,7 @@
 import Image from "next/image";
-import React from "react";
-import Logo from "@/public/img/brandTwo.png";
 import Link from "next/link";
-import { navItems } from "../data";
 import { IoIosArrowDown } from "react-icons/io";
+import { navItems } from "../data";
 import MultipleTheme from "../theme/MultipleTheme";
 const MegaNav = () => {
   return (
@@ -33,7 +31,7 @@ const MegaNav = () => {
                 {/* Mega Menu ============== */}
 
                 {val.children && (
-                  <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg bg-gray-700 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
+                  <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg bg-slate-50 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
                     {val.img && (
                       <div className="flex flex-col justify-center items-center">
                         <Image src={val.img} alt="" width={50} height={50} />
@@ -78,10 +76,10 @@ const MegaNav = () => {
       <section className="flex justify-center space-x-5 items-center">
         <div className="flex relative cursor-pointer items-center gap-2 text-neutral-400 hover:text-black group">
           <span>Theme</span>
-            <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
-            <div className="z-50 absolute left-0 right-0 top-6 hidden w-fit flex-col gap-1 rounded-lg bg-gray-700 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
-                <MultipleTheme/>
-            </div>
+          <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
+          <div className="z-50 absolute left-0 right-0 top-6 hidden w-fit flex-col gap-1 rounded-lg bg-slate-50 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
+            <MultipleTheme />
+          </div>
         </div>
         <h5>Drak - Light</h5>
       </section>

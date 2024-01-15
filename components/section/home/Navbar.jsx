@@ -7,7 +7,7 @@ import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
-import { navItems } from "../../../../../components/section/forTailwind/utils/allData";
+import { navItems } from "../forTailwind/utils/allData";
 
 const Navbar = () => {
   const [animationParent] = useAutoAnimate();

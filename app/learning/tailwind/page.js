@@ -1,5 +1,9 @@
 const page = () => {
-  return <div>page</div>;
+  return (
+    <div>
+      <h1>This is tailwind learning home</h1>
+    </div>
+  );
 };
 
 export default page;

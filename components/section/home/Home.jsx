@@ -1,14 +1,15 @@
 "use client";
 
+import Experience from "./Experience";
 import Hero from "./Hero";
-import SideBar from "./SideBar";
 
 const Home = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="">
       {/* <Navbar /> */}
-      <SideBar />
+      {/* <SideBar /> */}
       <Hero />
+      <Experience />
     </div>
   );
 };
