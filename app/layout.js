@@ -1,6 +1,7 @@
 import MegaNav from "@/components/megaNav/MegaNav";
 import { Catamaran, Inter, Overpass } from "next/font/google";
 import "./globals.css";
+import { Providers } from "./providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -31,8 +32,10 @@ export default function RootLayout({ children }) {
           catamaran.variable
         } ${process.env.NODE_ENV == "development" ? "debug-screens" : ""}`}
       >
-        <MegaNav />
-        {children}
+        <Providers>
+          <MegaNav />
+          {children}
+        </Providers>
       </body>
     </html>
   );

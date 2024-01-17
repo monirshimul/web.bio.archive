@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.1",
+    "@nextui-org/react": "^2.2.9",
     "axios": "^1.6.5",
-    "framer-motion": "^10.17.9",
+    "framer-motion": "^10.18.0",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
+    "react-responsive": "^9.0.2",
     "react-wrap-balancer": "^1.1.0",
     "rippleui": "^1.12.1",
     "tailwindcss-debug-screens": "^2.2.1"

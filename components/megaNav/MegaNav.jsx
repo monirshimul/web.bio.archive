@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowDown } from "react-icons/io";
 import { navItems } from "../data";
-import MultipleTheme from "../theme/MultipleTheme";
 const MegaNav = () => {
   return (
     <div className="flex justify-center bg-slate-50 p-4 z-50">
@@ -32,15 +31,15 @@ const MegaNav = () => {
 
                 {val.children && (
                   <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg bg-slate-50 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
-                    {val.img && (
+                    {/* {val.img && (
                       <div className="flex flex-col justify-center items-center">
-                        <Image src={val.img} alt="" width={50} height={50} />
+                        <Image src={val.img} alt="" width={40} height={40} />
                         <span className="text-sm text-neutral-400 transition-all hover:text-gray-500 uppercase">
                           All {val.label}
                         </span>
                       </div>
-                    )}
-                    <div className=" ml-5 flex border-l justify-start flex-wrap">
+                    )} */}
+                    <div className=" flex border-l justify-start flex-wrap">
                       {val.children.map((ch, i) => (
                         <Link
                           key={i}
@@ -73,7 +72,7 @@ const MegaNav = () => {
         </nav>
       </section>
       {/* for navmenu */}
-      <section className="flex justify-center space-x-5 items-center">
+      {/* <section className="flex justify-center space-x-5 items-center">
         <div className="flex relative cursor-pointer items-center gap-2 text-neutral-400 hover:text-black group">
           <span>Theme</span>
           <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
@@ -82,7 +81,7 @@ const MegaNav = () => {
           </div>
         </div>
         <h5>Drak - Light</h5>
-      </section>
+      </section> */}
     </div>
   );
 };
