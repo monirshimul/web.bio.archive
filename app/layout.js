@@ -20,7 +20,7 @@ const catamaran = Catamaran({
 });
 
 export const metadata = {
-  title: "Bio Archieve",
+  title: "Bio Archive",
   description: "Collection of all works, learnings",
 };
 
@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <MegaNav />
+          {/* <Navbar /> */}
           {children}
         </Providers>
       </body>

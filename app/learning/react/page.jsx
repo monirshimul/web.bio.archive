@@ -1,9 +1,7 @@
-import MainForm from "./ui/multisteps/MainForm";
-
 const page = () => {
   return (
     // multistep forms
-    <MainForm />
+    <h1>This is React Learnign Collections Home Page</h1>
   );
 };
 

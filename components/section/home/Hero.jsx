@@ -8,7 +8,7 @@ import Balancer from "react-wrap-balancer";
 const Hero = () => {
   const bannerImages = [databiz, meet, maker];
   return (
-    <div className="h-fit w-full bg-slate-50 mx-auto container mt-10 py-5">
+    <div className="h-fit w-full bg-slate-50/30 border border-dashed border-gray-100 rounded-lg mx-auto container mt-10 py-5">
       {/* hero */}
       <section className="mx-auto flex max-w-7xl flex-col-reverse gap-2 px-4 pb-12 transition-all md:flex-row md:justify-around md:items-center md:gap-4">
         {/* left div */}
@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="flex gap-2 md:gap-6">
             {bannerImages.map((img, i) => (
               <Image
-                className=" h-5 w-auto"
+                className=" h-5 w-auto mx-5 lg:mx-0"
                 key={i}
                 src={img}
                 alt="client-image"

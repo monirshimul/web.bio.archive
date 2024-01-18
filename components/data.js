@@ -1,58 +1,51 @@
-import learning from "@/public/img/learningIcon.png";
-import next from "@/public/img/next.png";
-import project from "@/public/img/proIcon.png";
-import react from "@/public/img/react.svg";
-import tailwind from "@/public/img/tailwind.svg";
-import typescript from "@/public/img/typescript.png";
+import { FcIdea } from "react-icons/fc";
 
 export const navItems = [
   {
     label: "Projects",
     link: "#",
-    img: project,
     children: [
       {
         label: "Next",
         link: "#",
-        iconImage: next,
+        iconImage: <FcIdea />,
       },
       {
         label: "React",
         link: "#",
-        iconImage: react,
+        iconImage: <FcIdea />,
       },
       {
         label: "TypeScript",
         link: "#",
         //   iconImage:<FcInspection />
-        iconImage: typescript,
+        iconImage: <FcIdea />,
       },
       {
         label: "Tailwind",
         link: "#",
-        iconImage: tailwind,
+        iconImage: <FcIdea />,
       },
     ],
   },
   {
     label: "Learning",
     link: "#",
-    img: learning,
     children: [
       {
         label: "TailWind",
         link: "/learning/tailwind",
-        iconImage: tailwind,
+        iconImage: <FcIdea />,
       },
       {
         label: "React",
         link: "/learning/react",
-        iconImage: react,
+        iconImage: <FcIdea />,
       },
       {
         label: "Next",
         link: "#",
-        iconImage: next,
+        iconImage: <FcIdea />,
       },
     ],
   },

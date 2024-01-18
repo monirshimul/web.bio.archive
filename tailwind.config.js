@@ -27,5 +27,9 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-debug-screens"), nextui()],
+  plugins: [
+    require("tailwindcss-debug-screens"),
+    nextui(),
+    require("tailwind-scrollbar"),
+  ],
 };

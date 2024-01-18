@@ -1,12 +1,27 @@
-import Image from "next/image";
+"use client";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Link from "next/link";
+import { useState } from "react";
+import { FiMenu } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { navItems } from "../data";
+import MobileNav from "../mobileNav/MobileNav";
 const MegaNav = () => {
+  const [animationParent] = useAutoAnimate();
+  const [isSideMenuOpen, setSideMenue] = useState(false);
+  function openSideMenu() {
+    setSideMenue(true);
+  }
+  function closeSideMenu() {
+    setSideMenue(false);
+  }
   return (
     <div className="flex justify-center bg-slate-50 p-4 z-50">
       {/* for logo */}
-      <section className="container mx-auto flex justify-start items-center">
+      <section
+        ref={animationParent}
+        className="container mx-auto flex justify-start items-center"
+      >
         <Link href="/">
           {/* <Image className="" src={Logo} alt="" width={100} height={20} /> */}
           <h1 className="text-4xl font-extralight text-slate-500">
@@ -14,6 +29,10 @@ const MegaNav = () => {
             <span className="text-orange-400 font-extrabold">O</span>DER
           </h1>
         </Link>
+
+        {/* for Mobile Nav */}
+        {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
+        {/* navItems */}
         <nav className="hidden relative md:flex items-center gap-4 transition-all ml-16">
           {navItems.map((val, ind) => (
             <Link
@@ -47,16 +66,7 @@ const MegaNav = () => {
                           className="flex cursor-pointer items-center py-1 pl-5 pr-3 text-neutral-400 hover:text-black"
                         >
                           {/* image */}
-                          {ch.iconImage && (
-                            // <Image src={ch.iconImage} width={15} height={15} alt="item-icon" />
-                            // <>{ch.iconImage}</>
-                            <Image
-                              src={ch.iconImage}
-                              alt=""
-                              width={20}
-                              height={20}
-                            />
-                          )}
+                          {ch.iconImage && <>{ch.iconImage}</>}
                           {/* item */}
                           <span className="whitespace-nowrap pl-3">
                             {ch.label}
@@ -71,6 +81,10 @@ const MegaNav = () => {
           ))}
         </nav>
       </section>
+      <FiMenu
+        onClick={openSideMenu}
+        className="cursor-pointer text-4xl md:hidden"
+      />
       {/* for navmenu */}
       {/* <section className="flex justify-center space-x-5 items-center">
         <div className="flex relative cursor-pointer items-center gap-2 text-neutral-400 hover:text-black group">

@@ -8,7 +8,7 @@ import {
 import { useMediaQuery } from "react-responsive";
 import { MainContext } from "./MainForm";
 const LeftMenuList = ({ name, icon }) => {
-  let isTabletMid = useMediaQuery({ query: "(max-width: 768px)" });
+  let isTabletMid = useMediaQuery({ query: "(max-width: 1279px)" });
   let { type, changeType, status } = useContext(MainContext);
   let { Basic, Official, Personal } = status;
   console.log("isTabletMid ===", isTabletMid);

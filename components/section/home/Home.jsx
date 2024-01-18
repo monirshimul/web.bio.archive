@@ -1,5 +1,6 @@
 "use client";
 
+import CallbackAsChildren from "./CallbackAsChildren";
 import Experience from "./Experience";
 import Hero from "./Hero";
 
@@ -10,6 +11,7 @@ const Home = () => {
       {/* <SideBar /> */}
       <Hero />
       <Experience />
+      <CallbackAsChildren />
     </div>
   );
 };
