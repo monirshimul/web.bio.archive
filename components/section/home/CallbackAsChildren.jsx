@@ -1,5 +1,7 @@
+import { memo } from "react";
+
 const Inner = (props) => {
-  console.log("props", props);
+  // console.log("props", props);
   return (
     <div className="container mx-auto border rounded-xl mb-5 border-dashed bg-gray-50/30 p-5">
       {props.children(props.label)}
@@ -11,7 +13,7 @@ const Inner = (props) => {
   );
 };
 
-const CallbackAsChildren = () => {
+const CallbackAsChildren = memo(function CallbackAsChildren() {
   let assume = (subTitle, ownStyle) => {
     return <h1 className={ownStyle}>{subTitle}</h1>;
   };
@@ -24,6 +26,6 @@ const CallbackAsChildren = () => {
       )}
     </Inner>
   );
-};
+});
 
 export default CallbackAsChildren;

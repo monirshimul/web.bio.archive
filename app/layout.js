@@ -1,7 +1,8 @@
 import MegaNav from "@/components/megaNav/MegaNav";
 import { Catamaran, Inter, Overpass } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
+import { Providers as NextUiProviders } from "./providers";
+import { ReduxProvider } from "./reduxProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -32,11 +33,13 @@ export default function RootLayout({ children }) {
           catamaran.variable
         } ${process.env.NODE_ENV == "development" ? "debug-screens" : ""}`}
       >
-        <Providers>
-          <MegaNav />
-          {/* <Navbar /> */}
-          {children}
-        </Providers>
+        <ReduxProvider>
+          <NextUiProviders>
+            <MegaNav />
+            {/* <Navbar /> */}
+            {children}
+          </NextUiProviders>
+        </ReduxProvider>
       </body>
     </html>
   );

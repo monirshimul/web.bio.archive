@@ -1,12 +1,16 @@
 "use client";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { navItems } from "../data";
 import MobileNav from "../mobileNav/MobileNav";
+import NavMenu from "./NavMenu";
 const MegaNav = () => {
+  const router = useRouter();
+  const pathname = usePathname();
   const [animationParent] = useAutoAnimate();
   const [isSideMenuOpen, setSideMenue] = useState(false);
   function openSideMenu() {
@@ -15,6 +19,14 @@ const MegaNav = () => {
   function closeSideMenu() {
     setSideMenue(false);
   }
+
+  const goCertainPage = (link) => {
+    // console.log("the link", link);
+    // console.log(router);
+    router.refresh();
+    router.push(link, { scroll: false });
+  };
+
   return (
     <div className="flex justify-center bg-slate-50 p-4 z-50">
       {/* for logo */}
@@ -22,13 +34,13 @@ const MegaNav = () => {
         ref={animationParent}
         className="container mx-auto flex justify-start items-center"
       >
-        <Link href="/">
-          {/* <Image className="" src={Logo} alt="" width={100} height={20} /> */}
+        {/* <Link href="/">
+          <Image className="" src={Logo} alt="" width={100} height={20} />
           <h1 className="text-4xl font-extralight text-slate-500">
             <span className="text-cyan-400 font-extrabold">Z</span>-C
             <span className="text-orange-400 font-extrabold">O</span>DER
           </h1>
-        </Link>
+        </Link> */}
 
         {/* for Mobile Nav */}
         {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
@@ -50,30 +62,22 @@ const MegaNav = () => {
 
                 {val.children && (
                   <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg bg-slate-50 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
-                    {/* {val.img && (
-                      <div className="flex flex-col justify-center items-center">
-                        <Image src={val.img} alt="" width={40} height={40} />
-                        <span className="text-sm text-neutral-400 transition-all hover:text-gray-500 uppercase">
-                          All {val.label}
+                    {val.children.map((ch, i) => (
+                      <NavMenu key={i} properties={ch} />
+                    ))}
+                    {/* {val.children.map((ch, i) => (
+                      <div
+                        key={i}
+                        onClick={() => goCertainPage(ch.link)}
+                        className="flex cursor-pointer items-center py-1 pl-5 pr-3 text-neutral-400 hover:text-black"
+                      >
+                        {ch.iconImage && <>{ch.iconImage}</>}
+
+                        <span className="whitespace-nowrap pl-3">
+                          {ch.label}
                         </span>
                       </div>
-                    )} */}
-                    <div className=" flex border-l justify-start flex-wrap">
-                      {val.children.map((ch, i) => (
-                        <Link
-                          key={i}
-                          href={ch.link ?? "#"}
-                          className="flex cursor-pointer items-center py-1 pl-5 pr-3 text-neutral-400 hover:text-black"
-                        >
-                          {/* image */}
-                          {ch.iconImage && <>{ch.iconImage}</>}
-                          {/* item */}
-                          <span className="whitespace-nowrap pl-3">
-                            {ch.label}
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
+                    ))} */}
                   </div>
                 )}
               </div>

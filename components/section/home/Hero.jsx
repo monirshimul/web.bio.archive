@@ -14,13 +14,11 @@ const Hero = () => {
         {/* left div */}
 
         <div className=" flex flex-col items-center  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left">
-          <Balancer>
-            <h1 className="text-4xl font-semibold md:text-6xl">
-              Mohammad Monirul Islam
-            </h1>
-          </Balancer>
-          <Balancer>
-            <p className=" text-neutral-400 md:max-w-[400px]">
+          <h1 className="text-4xl font-semibold md:text-6xl">
+            <Balancer>Mohammad Monirul Islam</Balancer>
+          </h1>
+          <p className=" text-neutral-400 md:max-w-[400px]">
+            <Balancer>
               Hey, this is Monirul Islam. Now I’m working as a frontend
               developer at Foxcatcher IT Solution an American based start-up
               firm. Previously I worked for Era Infotech LTD, that was my first
@@ -28,8 +26,8 @@ const Hero = () => {
               now. At Era I had some R&D experience in AI, Blockchain and so
               many others modern technologies along side with frontend
               developing.
-            </p>
-          </Balancer>
+            </Balancer>
+          </p>
           <button className="border-balck  w-fit rounded-xl border-2 bg-black px-4 py-2  text-white transition-all hover:border-black hover:bg-black hover:bg-transparent  hover:text-black/90">
             Learn more
           </button>

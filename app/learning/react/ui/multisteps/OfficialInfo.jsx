@@ -1,9 +1,9 @@
+"use client";
 import { Input, Select, SelectItem } from "@nextui-org/react";
 import Headings from "../components/Headings";
 
 const OfficialInfo = () => {
-  console.log("OfficialInfo");
-  let departments = [
+  let data = [
     { label: "Software Development", value: "softwareDev" },
     { label: "Quality Assurance", value: "qa" },
     { label: "Software Testing", value: "softwareTest" },
@@ -45,7 +45,7 @@ const OfficialInfo = () => {
             className="max-w-full"
             color="success"
           >
-            {departments.map((dep) => (
+            {data.map((dep) => (
               <SelectItem key={dep.value} value={dep.value}>
                 {dep.label}
               </SelectItem>

@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { memo } from "react";
 import { expData } from "./data";
-const Experience = () => {
+const Experience = memo(function Experience() {
   console.log("exp", expData);
   return (
     <div className="container mx-auto py-10">
@@ -62,6 +63,6 @@ const Experience = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Experience;

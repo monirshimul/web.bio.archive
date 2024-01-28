@@ -44,7 +44,12 @@ export const navItems = [
       },
       {
         label: "Next",
-        link: "#",
+        link: "/learning/next",
+        iconImage: <FcIdea />,
+      },
+      {
+        label: "Redux",
+        link: "/learning/redux",
         iconImage: <FcIdea />,
       },
     ],
