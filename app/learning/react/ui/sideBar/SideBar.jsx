@@ -78,7 +78,7 @@ const SideBar = () => {
       name: "advanced",
       rootUrl: "/learning/react",
       icon: TbReportAnalytics,
-      menus: ["hoc", "reconciliation"],
+      menus: ["hoc", "reconciliation", "dynamic"],
     },
   ];
   return (
