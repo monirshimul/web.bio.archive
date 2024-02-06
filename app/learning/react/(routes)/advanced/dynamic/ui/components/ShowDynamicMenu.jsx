@@ -7,8 +7,6 @@ import { dynamicData } from "../data/data";
 const ShowDynamicMenu = () => {
   // console.log({ dynamicData });
   const [mainData, setMainData] = useState(dynamicData || []);
-  const [innerVal, setInnerVal] = useState([]);
-
   const showInnerMenu = (ind, id, arr) => {
     arr.filter((data) => {
       if (data.id === id) {

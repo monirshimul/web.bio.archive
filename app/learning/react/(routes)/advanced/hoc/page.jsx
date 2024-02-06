@@ -1,5 +1,11 @@
+import HocDef from "./components/HocDef";
+
 const page = () => {
-  return <div>Hogher Order Component page</div>;
+  return (
+    <div>
+      <HocDef />
+    </div>
+  );
 };
 
 export default page;
