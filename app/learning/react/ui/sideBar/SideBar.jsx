@@ -134,7 +134,7 @@ const SideBar = () => {
         {/* Menus */}
 
         <div className="flex flex-col h-full">
-          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 overflow-x-hidden -x-hidden scrollbar-thin scrollbar-track-gray-100/60 scrollbar-thumb ">
+          <ul className="whitespace-pre px-2.5 text-[0.9rem] py-5 flex flex-col gap-1 overflow-x-hidden scrollbar-thin scrollbar-track-gray-100/60 scrollbar-thumb ">
             <li className="">
               <Link
                 className={`link ${

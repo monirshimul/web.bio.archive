@@ -18,7 +18,7 @@ const ShowDynamicMenu = () => {
 
   console.log("innerVal", mainData);
   return (
-    <div className="bg-gray-50 m-5 p-5 max-w-sm rounded-xl">
+    <div className="bg-slate-400 m-5 p-5 shadow-md h-fit flex-1 rounded-xl">
       {mainData.map((data, ind, fullArray) => (
         <div
           className="flex flex-col bg-green-50/60 rounded-xl p-2 border border-dashed mb-2"
