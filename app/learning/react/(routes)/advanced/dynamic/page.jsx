@@ -3,6 +3,7 @@ import Image from "next/image";
 import MultiSelect from "./ui/components/MultiSelect";
 import SelectsCode from "./ui/components/SelectsCode";
 import ShowDynamicMenu from "./ui/components/ShowDynamicMenu";
+import SelectInputBar from "./ui/components/selectInInputBar/SelectInputBar";
 
 const page = () => {
   return (
@@ -21,7 +22,14 @@ const page = () => {
         </div>
       </div>
       <MultiSelect />
-      <SelectsCode />
+      <div className="flex gap-2">
+        <div className="flex-1">
+          <SelectsCode />
+        </div>
+        <div className="flex-1">
+          <SelectInputBar />
+        </div>
+      </div>
     </div>
   );
 };

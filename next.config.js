@@ -8,6 +8,12 @@ const nextConfig = {
         port: "",
         pathname: "/product-images/**",
       },
+      {
+        protocol: "https",
+        hostname: "robohash.org",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
