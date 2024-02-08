@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 const SubMenu = ({ data }) => {
+  console.log("data", data);
   const pathname = usePathname();
   const [subMenuOpen, setSubMenuOpen] = useState();
   return (

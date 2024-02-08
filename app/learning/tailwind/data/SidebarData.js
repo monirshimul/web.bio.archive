@@ -19,6 +19,19 @@ let randomId = () => {
 export const Items = [
   {
     id: randomId(),
+    label: "Dark Theme",
+    link: "",
+    iconImage: <BiEqualizer />,
+  },
+
+  {
+    id: randomId(),
+    label: "Flex Box",
+    link: "#",
+    iconImage: <LuServerCog />,
+  },
+  {
+    id: randomId(),
     label: "Projects",
     link: "/learning/next/projects",
     iconImage: <BiSpreadsheet />,
@@ -39,7 +52,19 @@ export const Items = [
   },
   {
     id: randomId(),
-    label: "Topics",
+    label: "Theming",
+    link: "#",
+    iconImage: <FaUsersViewfinder />,
+  },
+  {
+    id: randomId(),
+    label: "Grid",
+    link: "",
+    iconImage: <LuDatabaseBackup />,
+  },
+  {
+    id: randomId(),
+    label: "Works",
     link: "#",
     iconImage: <BiAddToQueue />,
     children: [
@@ -68,29 +93,5 @@ export const Items = [
         iconImage: <BiDetail />,
       },
     ],
-  },
-  {
-    id: randomId(),
-    label: "Data Fetching",
-    link: "",
-    iconImage: <BiEqualizer />,
-  },
-  {
-    id: randomId(),
-    label: "Rendering",
-    link: "#",
-    iconImage: <FaUsersViewfinder />,
-  },
-  {
-    id: randomId(),
-    label: "Caching",
-    link: "",
-    iconImage: <LuDatabaseBackup />,
-  },
-  {
-    id: randomId(),
-    label: "Server Actions",
-    link: "#",
-    iconImage: <LuServerCog />,
   },
 ];

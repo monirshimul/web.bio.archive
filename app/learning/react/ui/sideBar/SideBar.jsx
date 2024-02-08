@@ -82,7 +82,7 @@ const SideBar = () => {
     },
   ];
   return (
-    <div>
+    <div className="border border-dashed relative left-0">
       <div
         onClick={() => setIsSideBarOpen(false)}
         className={`md:hidden fixed inset-0 max-h-screen z[990] bg-black/50 ${
@@ -94,7 +94,7 @@ const SideBar = () => {
         variants={SideBar_animation}
         initial={{ x: isTab ? -250 : 0 }}
         animate={isSideBarOpen ? "open" : "closed"}
-        className="bg-slate-50 text-gray shadow-md z-[30] max-w-[16rem] w-[16rem] h-screen
+        className="bg-white text-gray z-[30] max-w-[16rem] w-[16rem] h-screen
             overflow-hidden md:relative fixed"
       >
         {/* Sidebar Specific Logo */}
@@ -127,7 +127,7 @@ const SideBar = () => {
             <IoIosArrowBack size={25} />
           </motion.div>
           <span className="text-lg whitespace-pre text-neutral-500">
-            <span className="text-orange-400">Tailwind</span> Learning
+            <span className="text-orange-400">React</span> Learning
           </span>
         </div>
 

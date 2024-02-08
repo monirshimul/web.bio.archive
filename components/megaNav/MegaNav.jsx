@@ -28,19 +28,19 @@ const MegaNav = () => {
   };
 
   return (
-    <div className="flex justify-center bg-slate-50 p-4 z-50">
+    <div className="flex bg-slate-50 p-4 z-50 sticky top-0 left-0">
       {/* for logo */}
       <section
         ref={animationParent}
-        className="container mx-auto flex justify-start items-center"
+        className="flex justify-between md:justify-center lg:justify-between items-center w-full flex-wrap"
       >
-        {/* <Link href="/">
-          <Image className="" src={Logo} alt="" width={100} height={20} />
+        <Link className="pl-5" href="/">
+          {/* <Image className="" src={Logo} alt="" width={100} height={20} /> */}
           <h1 className="text-4xl font-extralight text-slate-500">
             <span className="text-cyan-400 font-extrabold">Z</span>-C
             <span className="text-orange-400 font-extrabold">O</span>DER
           </h1>
-        </Link> */}
+        </Link>
 
         {/* for Mobile Nav */}
         {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
@@ -84,6 +84,7 @@ const MegaNav = () => {
             </Link>
           ))}
         </nav>
+        <div></div>
       </section>
       <FiMenu
         onClick={openSideMenu}
