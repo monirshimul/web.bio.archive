@@ -1,8 +1,8 @@
 "use client";
 
-import Experience from "./Experience";
+import EachExperiences from "./EachExperiences";
 import Hero from "./Hero";
-import ExpTab from "./Tabs";
+import Skills from "./Skills";
 
 const Home = () => {
   return (
@@ -10,8 +10,10 @@ const Home = () => {
       {/* <Navbar /> */}
       {/* <SideBar /> */}
       <Hero />
-      <ExpTab />
-      <Experience />
+      <Skills />
+      {/* <ExpTab /> */}
+      {/* <Experience /> */}
+      <EachExperiences />
     </div>
   );
 };

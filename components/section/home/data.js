@@ -6,6 +6,7 @@ import { SlCalender } from "react-icons/sl";
 
 export const expData = [
   {
+    id: 1,
     positionLabel: "Lead Frontend Developer",
     iconForPositionLabel: <FaUserGear className="text-green-500" size={20} />,
     companyName: "Foxcatcher IT Solution",
@@ -23,6 +24,7 @@ export const expData = [
     imgUrl: foxLogo,
   },
   {
+    id: 2,
     positionLabel: "Frontend Developer",
     iconForPositionLabel: <FaUserGear className="text-cyan-500" size={20} />,
     companyName: "Era InfoTech Ltd.",

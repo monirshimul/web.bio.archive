@@ -14,7 +14,7 @@ const Hero = () => {
         {/* left div */}
 
         <div className=" flex flex-col items-center  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left">
-          <h1 className="text-4xl font-semibold md:text-6xl">
+          <h1 className="text-4xl font-semibold md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-lime-600">
             <Balancer>Mohammad Monirul Islam</Balancer>
           </h1>
           <p className=" text-neutral-400 md:max-w-[400px]">
@@ -28,10 +28,10 @@ const Hero = () => {
               developing.
             </Balancer>
           </p>
-          <button className="border-balck  w-fit rounded-xl border-2 bg-black px-4 py-2  text-white transition-all hover:border-black hover:bg-black hover:bg-transparent  hover:text-black/90">
-            Learn more
+          <button className="border-balck w-fit rounded-xl border-2 bg-gradient-to-r from-indigo-600 to-pink-600 px-4 py-2  text-white transition-all hover:border-gray-500">
+            Contact Me
           </button>
-          <div className="flex gap-2 md:gap-6">
+          {/* <div className="flex gap-2 md:gap-6">
             {bannerImages.map((img, i) => (
               <Image
                 className=" h-5 w-auto mx-5 lg:mx-0"
@@ -40,7 +40,7 @@ const Hero = () => {
                 alt="client-image"
               />
             ))}
-          </div>
+          </div> */}
         </div>
 
         {/* right div */}

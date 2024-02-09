@@ -1,5 +1,4 @@
 import { Card, CardBody, Tab, Tabs } from "@nextui-org/react";
-import CallbackAsChildren from "./CallbackAsChildren";
 import Experience from "./Experience";
 import Navbar from "./Navbar";
 import Skills from "./Skills";
@@ -17,7 +16,6 @@ const ExpTab = () => {
         <Tab key="skills" title="Skills">
           <Card>
             <CardBody>
-              <CallbackAsChildren />
               <Skills />
             </CardBody>
           </Card>

@@ -55,15 +55,30 @@ const dataThree = {
 
 const Skills = (props) => {
   return (
-    <div className="border flex flex-col lg:flex-row flex-wrap p-10 border-dashed rounded-xl bg-gray-50 gap-5">
-      <div className="flex-1 border flex justify-center p-5 shadow-sm bg-white rounded-xl">
-        <Doughnut data={dataOne} />
-      </div>
-      <div className="flex-1 border flex justify-center p-5 shadow-sm bg-white rounded-xl">
-        <Doughnut data={dataTwo} />
-      </div>
-      <div className="flex-1 border flex justify-center p-5 shadow-sm bg-white rounded-xl">
-        <Doughnut data={dataThree} />
+    <div className="container mx-auto rounded-3xl shadow-md p-5 bg-white">
+      {/* <CallbackAsChildren /> */}
+
+      <h1 className="my-5 text-wrap font-extralight antialiased font-catamaran capitalize text-center py-10 px-5 text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl  bg-slate-50 text-neutral-600">
+        Some Graph of{" "}
+        <span className="font-bold text-wrap bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-yellow-500">
+          Technologies
+        </span>{" "}
+        that can describe my{" "}
+        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-fuchsia-500">
+          Skills
+        </span>
+      </h1>
+
+      <div className="border container mx-auto flex flex-col lg:flex-row flex-wrap justify-center items-center p-10 border-dashed rounded-xl bg-gray-50 gap-5">
+        <div className="border flex justify-center p-5 shadow-sm bg-white rounded-xl">
+          <Doughnut data={dataOne} />
+        </div>
+        <div className=" border flex justify-center p-5 shadow-sm bg-white rounded-xl">
+          <Doughnut data={dataTwo} />
+        </div>
+        <div className=" border flex justify-center p-5 shadow-sm bg-white rounded-xl">
+          <Doughnut data={dataThree} />
+        </div>
       </div>
     </div>
   );

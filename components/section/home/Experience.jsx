@@ -4,9 +4,17 @@ import { expData } from "./data";
 const Experience = memo(function Experience() {
   console.log("exp", expData);
   return (
-    <div className="container mx-auto py-10">
-      <h1 className="text-3xl text-neutral-500 font-catamaran font-bold border-b pb-5">
-        Experience
+    <div className="container mx-auto py-10 px-5 rounded-3xl bg-white shadow-md my-5">
+      <h1 className="text-2xl text-center capitalize sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-neutral-500 font-catamaran font-extralight bg-slate-50 p-5">
+        {/* <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500">
+          Experiences
+        </span> */}
+        Experiences
+        <br /> with{" "}
+        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-rose-500">
+          Industrial{" "}
+        </span>
+        Knowledge
       </h1>
       <div className="flex m-5 p-5 flex-col max-w-full justify-around gap-5 mx-auto lg:flex-row">
         {expData.map((val, ind) => (
