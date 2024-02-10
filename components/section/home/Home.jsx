@@ -3,6 +3,7 @@
 import EachExperiences from "./EachExperiences";
 import Hero from "./Hero";
 import IndustryCapablities from "./IndustryCapablities";
+import ProjectGlimpse from "./ProjectGlimpse";
 import Services from "./Services";
 import Skills from "./Skills";
 
@@ -19,6 +20,7 @@ const Home = () => {
       <Skills />
       <Services />
       <IndustryCapablities />
+      <ProjectGlimpse />
     </div>
   );
 };
