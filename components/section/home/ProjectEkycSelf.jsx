@@ -1,4 +1,4 @@
-import ekycTwo from "@/public/img/selfEkyc.png";
+import selfEkyc from "@/public/img/selfEkyc.png";
 import Image from "next/image";
 const ProjectEkycSelf = () => {
   return (
@@ -45,7 +45,7 @@ const ProjectEkycSelf = () => {
       <div className="p-10">
         <Image
           className=" cursor-pointer"
-          src={ekycTwo}
+          src={selfEkyc}
           width={750}
           height={650}
           alt="clogo"

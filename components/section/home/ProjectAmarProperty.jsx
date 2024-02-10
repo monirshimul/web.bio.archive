@@ -1,4 +1,4 @@
-import amarPro from "@/public/img/amarProTwo.png";
+import AmaarProperty from "@/public/img/amarProTwo.png";
 import Image from "next/image";
 const ProjectAmarProperty = () => {
   return (
@@ -45,7 +45,7 @@ const ProjectAmarProperty = () => {
       <div className="p-10">
         <Image
           className=" cursor-pointer"
-          src={amarPro}
+          src={AmaarProperty}
           width={750}
           height={650}
           alt="clogo"

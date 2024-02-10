@@ -1,4 +1,4 @@
-import About from "@/public/img/attend.png";
+import foxAttend from "@/public/img/foxAttend.png";
 import Image from "next/image";
 const ProjectFoxAttend = () => {
   return (
@@ -6,7 +6,7 @@ const ProjectFoxAttend = () => {
       <div className="p-10">
         <Image
           className=" cursor-pointer"
-          src={About}
+          src={foxAttend}
           width={750}
           height={650}
           alt="clogo"
