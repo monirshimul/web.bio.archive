@@ -2,6 +2,7 @@
 
 import EachExperiences from "./EachExperiences";
 import Hero from "./Hero";
+import IndustryCapablities from "./IndustryCapablities";
 import Services from "./Services";
 import Skills from "./Skills";
 
@@ -11,11 +12,13 @@ const Home = () => {
       {/* <Navbar /> */}
       {/* <SideBar /> */}
       <Hero />
-      <Skills />
+
       {/* <ExpTab /> */}
       {/* <Experience /> */}
       <EachExperiences />
+      <Skills />
       <Services />
+      <IndustryCapablities />
     </div>
   );
 };
