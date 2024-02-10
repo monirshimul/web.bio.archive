@@ -1,4 +1,4 @@
-import AmaarProperty from "@/public/img/amarProTwo.png";
+import AmaarProperty from "@/public/img/about.png";
 import Image from "next/image";
 const ProjectAmarProperty = () => {
   return (
