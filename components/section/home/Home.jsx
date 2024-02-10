@@ -2,6 +2,7 @@
 
 import EachExperiences from "./EachExperiences";
 import Hero from "./Hero";
+import Services from "./Services";
 import Skills from "./Skills";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       {/* <ExpTab /> */}
       {/* <Experience /> */}
       <EachExperiences />
+      <Services />
     </div>
   );
 };

@@ -28,7 +28,7 @@ const MegaNav = () => {
   };
 
   return (
-    <div className="flex bg-slate-50 p-4 z-50 sticky top-0 left-0">
+    <div className="flex bg-transparent backdrop-blur-lg p-4 z-50 sticky top-0 left-0">
       {/* for logo */}
       <section
         ref={animationParent}

@@ -14,8 +14,10 @@ const Hero = () => {
         {/* left div */}
 
         <div className=" flex flex-col items-center  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left">
-          <h1 className="text-4xl font-semibold md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-lime-600">
-            <Balancer>Mohammad Monirul Islam</Balancer>
+          <h1 className="text-5xl font-bold font-catamaran lg:text-7xl text-neutral-500">
+            {/* <Balancer>Mohammad Monirul Islam</Balancer> */}
+            <span className="">Mohammad</span>
+            <br /> Monirul Islam
           </h1>
           <p className=" text-neutral-400 md:max-w-[400px]">
             <Balancer>

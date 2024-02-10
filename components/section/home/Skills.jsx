@@ -69,14 +69,14 @@ const Skills = (props) => {
         </span>
       </h1>
 
-      <div className="border container mx-auto flex flex-col lg:flex-row flex-wrap justify-center items-center p-10 border-dashed rounded-xl bg-gray-50 gap-5">
-        <div className="border flex justify-center p-5 shadow-sm bg-white rounded-xl">
+      <div className="border container flex flex-col lg:flex-row flex-wrap justify-center items-center py-10 border-dashed rounded-xl bg-gray-50 gap-5">
+        <div className="border p-5 shadow-sm bg-white rounded-xl">
           <Doughnut data={dataOne} />
         </div>
-        <div className=" border flex justify-center p-5 shadow-sm bg-white rounded-xl">
+        <div className=" border  p-5 shadow-sm bg-white rounded-xl">
           <Doughnut data={dataTwo} />
         </div>
-        <div className=" border flex justify-center p-5 shadow-sm bg-white rounded-xl">
+        <div className=" border p-5 shadow-sm bg-white rounded-xl">
           <Doughnut data={dataThree} />
         </div>
       </div>
