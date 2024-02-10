@@ -18,8 +18,8 @@ const ProjectEkycAssist = () => {
         </h1>
 
         <div className="border border-dashed p-3 rounded-xl">
-          <h3 className="text-3xl font-bold antialiased text-orange-500 font-catamaran">
-            FoxCatcher IT Solution
+          <h3 className="text-3xl font-bold antialiased text-sky-600 font-catamaran">
+            Era InfoTech Ltd.
           </h3>
           <span className="text-2xl antialiased font-bold text-neutral-600 font-catamaran">
             2022-2023
