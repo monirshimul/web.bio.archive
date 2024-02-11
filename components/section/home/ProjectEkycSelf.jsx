@@ -1,4 +1,4 @@
-import selfEkyc from "@/public/img/about.png";
+import selfEkyc from "@/public/img/selfEkyc.PNG";
 import Image from "next/image";
 const ProjectEkycSelf = () => {
   return (
