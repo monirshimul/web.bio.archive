@@ -1,4 +1,4 @@
-import foxAttend from "@/public/img/about.png";
+import foxAttend from "@/public/img/foxAttendPic.PNG";
 import Image from "next/image";
 const ProjectFoxAttend = () => {
   return (
