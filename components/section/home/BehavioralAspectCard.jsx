@@ -5,9 +5,19 @@ import {
   Chip,
   CircularProgress,
 } from "@nextui-org/react";
-const BehavioralAspectCard = ({ gradiant, title, markString, markNumber }) => {
+import { motion } from "framer-motion";
+const BehavioralAspectCard = ({
+  gradiant,
+  title,
+  markString,
+  markNumber,
+  variants,
+}) => {
   return (
-    <div className="p-3 bg-white rounded-2xl shadow-md">
+    <motion.div
+      variants={variants}
+      className="p-3 bg-white rounded-2xl shadow-md"
+    >
       <Card className={`w-[240px] h-[240px] border-none ${gradiant}`}>
         <CardBody className="justify-center items-center pb-0">
           <CircularProgress
@@ -35,7 +45,7 @@ const BehavioralAspectCard = ({ gradiant, title, markString, markNumber }) => {
           </Chip>
         </CardFooter>
       </Card>
-    </div>
+    </motion.div>
   );
 };
 

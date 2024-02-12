@@ -19,28 +19,35 @@ const EachExperiences = ({ val }) => {
     }
   };
   return (
-    <motion.div
-      variants={staggerContainer}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: false, amount: 0.25 }}
-      className="bg-white rounded-3xl container mx-auto p-5 shadow-md my-10"
-    >
-      <motion.h1
-        variants={fadeIn("up", "tween", 0.1, 0.5)}
-        className="text-2xl text-center antialiased capitalize sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-neutral-500 font-catamaran font-extralight bg-slate-50 p-5"
+    <div className="bg-white rounded-3xl container mx-auto p-5 shadow-md my-10">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
       >
-        {/* <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500">
+        <motion.h1
+          variants={fadeIn("up", "tween", 0.1, 0.5)}
+          className="text-2xl text-center antialiased capitalize sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-neutral-500 font-catamaran font-extralight bg-slate-50 p-5"
+        >
+          {/* <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500">
           Experiences
         </span> */}
-        Experiences
-        <br /> with{" "}
-        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-rose-500">
-          Industrial{" "}
-        </span>
-        Knowledge
-      </motion.h1>
-      <div className="flex flex-col gap-5 lg:flex-row justify-around items-center bg-slate-50/30 rounded-2xl my-3 p-5">
+          Experiences
+          <br /> with{" "}
+          <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-rose-500">
+            Industrial{" "}
+          </span>
+          Knowledge
+        </motion.h1>
+      </motion.div>
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="flex flex-col gap-5 lg:flex-row justify-around items-center bg-slate-50/30 rounded-2xl my-3 p-5"
+      >
         <motion.div variants={zoomIn(0.2, 1)} className="p-10">
           <Image
             className=" cursor-pointer"
@@ -88,7 +95,7 @@ const EachExperiences = ({ val }) => {
             </ul>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
 
       <motion.div
         variants={staggerContainer}
@@ -141,7 +148,7 @@ const EachExperiences = ({ val }) => {
           />
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 

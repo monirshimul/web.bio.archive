@@ -13,17 +13,36 @@ import {
   SiStyledcomponents,
 } from "react-icons/si";
 import { TbBrandNodejs, TbBrandReactNative } from "react-icons/tb";
+
+import { fadeIn, staggerContainer } from "@/utils/animations/motion";
+import { TypingText } from "@/utils/custom/CustomText";
+import { motion } from "framer-motion";
 const TechnicalAspects = () => {
   return (
     <section className="">
       {/* first section */}
-      <h1 className="text-3xl text-center antialiased bg-white rounded-xl border border-dashed p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 font-catamaran my-5">
-        Technical Aspects
-      </h1>
+      <motion.h1
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="text-3xl text-center antialiased bg-white rounded-xl border border-dashed p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 font-catamaran my-5"
+      >
+        <TypingText title={"Technical Aspects"} />
+      </motion.h1>
 
-      <div className="grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-5">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="grid 2xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-5"
+      >
         {/* card one */}
-        <div className="border border-dashed p-5 rounded-2xl shadow">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.5, 1)}
+          className="border border-dashed p-5 rounded-2xl shadow"
+        >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-amber-500 to-rose-500 rounded-md w-full p-3">
             Language
           </h1>
@@ -77,9 +96,12 @@ const TechnicalAspects = () => {
               />
             </span>
           </div>
-        </div>
+        </motion.div>
         {/* card two */}
-        <div className="border border-dashed p-5 rounded-2xl shadow">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.6, 1)}
+          className="border border-dashed p-5 rounded-2xl shadow"
+        >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-cyan-500 to-rose-500 rounded-md w-full p-3">
             Framework/Library
           </h1>
@@ -134,9 +156,12 @@ const TechnicalAspects = () => {
               />
             </span>
           </div>
-        </div>
+        </motion.div>
         {/* card three */}
-        <div className="border border-dashed p-5 rounded-2xl shadow">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.7, 1)}
+          className="border border-dashed p-5 rounded-2xl shadow"
+        >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-purple-500 to-rose-500 rounded-md w-full p-3">
             Other Tools
           </h1>
@@ -191,10 +216,13 @@ const TechnicalAspects = () => {
               />
             </span>
           </div>
-        </div>
+        </motion.div>
         {/* card Four */}
 
-        <div className="border border-dashed p-5 rounded-2xl shadow">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.8, 1)}
+          className="border border-dashed p-5 rounded-2xl shadow"
+        >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-teal-500 to-pink-500 rounded-md w-full p-3">
             CSS Library
           </h1>
@@ -248,8 +276,8 @@ const TechnicalAspects = () => {
               />
             </span>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

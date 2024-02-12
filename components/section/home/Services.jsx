@@ -1,3 +1,5 @@
+import { fadeIn, staggerContainer } from "@/utils/animations/motion";
+import { motion } from "framer-motion";
 import { CgPerformance } from "react-icons/cg";
 import { FaLaptopCode } from "react-icons/fa6";
 import { GoCodespaces } from "react-icons/go";
@@ -6,19 +8,38 @@ import { MdSpeed } from "react-icons/md";
 const Services = () => {
   return (
     <div className="bg-white rounded-3xl container mx-auto p-5 shadow-md my-10">
-      <h1 className="text-2xl text-center antialiased capitalize sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-neutral-500 font-catamaran font-extralight bg-slate-50 p-5">
-        {/* <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+      >
+        <motion.h1
+          variants={fadeIn("left", "tween", 0.2, 1)}
+          className="text-2xl text-center antialiased capitalize sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl text-neutral-500 font-catamaran font-extralight bg-slate-50 p-5"
+        >
+          {/* <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500">
           Experiences
         </span> */}
-        <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-amber-500">
-          Services
-        </span>
-        <br /> that <span className="">I </span>
-        Provide
-      </h1>
+          <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-amber-500">
+            Services
+          </span>
+          <br /> that <span className="">I </span>
+          Provide
+        </motion.h1>
+      </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-5">
-        <div className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5">
+      <motion.div
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.25 }}
+        className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-4 p-5"
+      >
+        <motion.div
+          variants={fadeIn("up", "tween", 0.5, 1.5)}
+          className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5"
+        >
           <FaLaptopCode
             size={100}
             className="text-white px-3 bg-gradient-to-r from-amber-500 to-purple-500 rounded-2xl"
@@ -35,9 +56,12 @@ const Services = () => {
             </p>
             {/* <div className=" absolute bottom-0 right-0 w-[100%] h-[30%] overflow-hidden rounded-full bg-gradient-to-r from-amber-500 to-pink-500 -rotate-45 blur-3xl"></div> */}
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.6, 1.6)}
+          className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5"
+        >
           <GoCodespaces
             size={100}
             className="text-white px-3 bg-gradient-to-r from-indigo-500 to-rose-500 rounded-2xl"
@@ -53,9 +77,12 @@ const Services = () => {
               Fareast Tower, 35 Topkhana Road, (Level-3), Dhaka-1000
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.7, 1.7)}
+          className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5"
+        >
           <CgPerformance
             size={100}
             className="text-white px-3 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl"
@@ -71,9 +98,12 @@ const Services = () => {
               Fareast Tower, 35 Topkhana Road, (Level-3), Dhaka-1000
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.8, 1.8)}
+          className="flex felx-col  md:flex-row justify-around shadow-sm items-center gap-5 border border-dashed rounded-2xl px-3 py-5"
+        >
           <MdSpeed
             size={100}
             className="text-white px-3 bg-gradient-to-r from-violet-500 to-orange-500 rounded-2xl"
@@ -89,8 +119,8 @@ const Services = () => {
               Fareast Tower, 35 Topkhana Road, (Level-3), Dhaka-1000
             </p>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
