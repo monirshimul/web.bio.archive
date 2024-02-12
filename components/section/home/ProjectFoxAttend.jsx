@@ -1,9 +1,22 @@
 import foxAttend from "@/public/img/foxAttendPic.PNG";
+import {
+  ImageVariants,
+  fadeIn,
+  staggerContainer,
+} from "@/utils/animations/motion";
+import { TypingText } from "@/utils/custom/CustomText";
+import { motion } from "framer-motion";
 import Image from "next/image";
 const ProjectFoxAttend = () => {
   return (
-    <div className="flex flex-col gap-5 lg:flex-row justify-around items-center bg-slate-50/30 rounded-2xl my-3 p-5">
-      <div className="p-10">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="flex flex-col gap-5 lg:flex-row justify-around items-center bg-slate-50/30 rounded-2xl my-3 p-5"
+    >
+      <motion.div variants={ImageVariants("left")} className="p-10">
         <Image
           className=" cursor-pointer"
           src={foxAttend}
@@ -11,10 +24,13 @@ const ProjectFoxAttend = () => {
           height={650}
           alt="clogo"
         />
-      </div>
-      <div className="flex shadow-sm flex-col bg-slate-50/30 border border-dashed rounded-2xl p-5">
+      </motion.div>
+      <motion.div
+        variants={fadeIn("up", "spring", 0.5, 1)}
+        className="flex shadow-sm flex-col bg-slate-50/30 border border-dashed rounded-2xl p-5"
+      >
         <h1 className="text-3xl antialiased bg-white rounded-xl border border-dashed p-2 my-2 font-bold md:text-4xl lg:text-5xl text-neutral-600 font-catamaran">
-          Fox Attend, Web & Mobile
+          <TypingText title={"Fox Attend, Web & Mobile"} />
         </h1>
 
         <div className="border border-dashed p-3 rounded-xl">
@@ -50,8 +66,8 @@ const ProjectFoxAttend = () => {
             <li>- Play role as a lead frontend developer in 2 projects</li>
           </ul>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

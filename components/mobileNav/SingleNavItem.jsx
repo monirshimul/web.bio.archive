@@ -29,12 +29,12 @@ const SingleNavItem = (props) => {
 
       {/* dropdown */}
       {isItemOpen && props.children && (
-        <div className="  w-auto flex-col gap-1 rounded-lg bg-gray-600 py-3 transition-all flex ">
+        <div className="  w-auto flex-col gap-1 rounded-lg bg-cyan-800  py-3 transition-all flex ">
           {props.children.map((ch, i) => (
             <Link
               key={i}
               href={ch.link ?? "#"}
-              className="flex cursor-pointer items-center  py-1 pl-6 pr-8 text-neutral-400 hover:text-black  "
+              className="flex cursor-pointer items-center  py-1 pl-6 pr-8 text-neutral-400 hover:text-white  "
             >
               {/* image */}
               {ch.iconImage && ch.iconImage}

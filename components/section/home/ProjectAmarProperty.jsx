@@ -1,11 +1,27 @@
 import AmaarProperty from "@/public/img/pbWeb.png";
+import {
+  ImageVariants,
+  fadeIn,
+  staggerContainer,
+} from "@/utils/animations/motion";
+import { TypingText } from "@/utils/custom/CustomText";
+import { motion } from "framer-motion";
 import Image from "next/image";
 const ProjectAmarProperty = () => {
   return (
-    <div className="flex flex-col-reverse gap-5 lg:flex-row justify-around items-center bg-slate-50/30 rounded-2xl my-3 p-5">
-      <div className="flex shadow-sm flex-col bg-slate-50/30 border border-dashed rounded-2xl p-5">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="flex flex-col-reverse gap-5 lg:flex-row justify-around items-center bg-slate-50/30 rounded-2xl my-3 p-5"
+    >
+      <motion.div
+        variants={fadeIn("up", "spring", 0.5, 1)}
+        className="flex shadow-sm flex-col bg-slate-50/30 border border-dashed rounded-2xl p-5"
+      >
         <h1 className="text-3xl antialiased bg-white rounded-xl border border-dashed p-2 my-2 font-bold md:text-4xl lg:text-5xl text-neutral-600 font-catamaran">
-          Amaar Property
+          <TypingText title={"Amaar Property"} />
         </h1>
 
         <div className="border border-dashed p-3 rounded-xl">
@@ -41,8 +57,8 @@ const ProjectAmarProperty = () => {
             <li>- Play role as a lead frontend developer in 2 projects</li>
           </ul>
         </div>
-      </div>
-      <div className="p-10">
+      </motion.div>
+      <motion.div variants={ImageVariants("right")} className="p-10">
         <Image
           className=" cursor-pointer"
           src={AmaarProperty}
@@ -50,8 +66,8 @@ const ProjectAmarProperty = () => {
           height={650}
           alt="clogo"
         />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

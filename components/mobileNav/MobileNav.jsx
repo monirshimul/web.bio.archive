@@ -5,11 +5,11 @@ import SingleNavItem from "./SingleNavItem";
 const MobileNav = ({ closeSideMenu }) => {
   return (
     <div className="fixed left-0 top-0 z-50 flex h-full min-h-screen w-full justify-end bg-gray-800/60 md:hidden">
-      <div className=" h-full w-[65%] bg-gray-700 z-50 px-4 py-4">
+      <div className=" h-full w-[65%] bg-gradient-to-tr from-cyan-800 to-slate-800 z-50 px-4 py-4">
         <section className="flex justify-end">
           <AiOutlineClose
             onClick={closeSideMenu}
-            className="cursor-pointer text-4xl "
+            className="cursor-pointer text-4xl text-gray-400"
           />
         </section>
         <div className="flex flex-col text-base gap-2 transition-all">

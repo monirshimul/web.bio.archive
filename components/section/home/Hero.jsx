@@ -2,7 +2,11 @@ import databiz from "@/public/img/client-databiz.svg";
 import maker from "@/public/img/client-maker.svg";
 import meet from "@/public/img/client-meet.svg";
 import Profile from "@/public/img/profile.jpg";
-import { fadeIn, staggerContainer } from "@/utils/animations/motion";
+import {
+  BoxVariants,
+  fadeIn,
+  staggerContainer,
+} from "@/utils/animations/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
@@ -60,10 +64,17 @@ const Hero = () => {
           variants={fadeIn("down", "tween", 0.2, 1)}
           className="md:w-1/2 md:relative flex justify-center items-center group cursor-pointer"
         >
-          <div className="hidden xl:block absolute w-7/12 h-96 bottom-20 opacity-20 right-10 transition-all group-hover:scale-105 duration-1000 group-hover:rotate-180 rounded-xl bg-cyan-400"></div>
-          <div className="hidden xl:block absolute w-7/12 h-96 top-20 opacity-20 left-10 transition-all group-hover:scale-105 duration-1000 group-hover:-rotate-180 rounded-xl bg-green-400"></div>
+          <motion.div
+            variants={BoxVariants("left")}
+            className="hidden xl:block absolute w-7/12 h-96 bottom-20 opacity-20 right-10 transition-all group-hover:scale-105 duration-1000 group-hover:rotate-180 rounded-xl bg-cyan-400"
+          ></motion.div>
+          <motion.div
+            variants={BoxVariants("right")}
+            className="hidden xl:block absolute w-7/12 h-96 top-20 opacity-20 left-10 transition-all group-hover:scale-105 duration-1000 group-hover:-rotate-180 rounded-xl bg-green-400"
+          ></motion.div>
           {/* <div className="hidden xl:block absolute w-7/12 h-96 bottom-20 opacity-20 right-10 transition-all animate-ping rounded-xl bg-cyan-400"></div>
           <div className="hidden xl:block absolute w-7/12 h-96 top-20 opacity-20 left-10 transition-all  rounded-xl animate-ping bg-green-400"></div> */}
+
           <Image
             className="hidden h-auto max-w-[400px]  md:block "
             src={Profile}
