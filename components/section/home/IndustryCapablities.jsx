@@ -1,5 +1,6 @@
 import BehavioralAspect from "./BehavioralAspect";
 import TechnicalAspects from "./TechnicalAspects";
+
 const IndustryCapablities = () => {
   return (
     <div className="bg-white rounded-3xl container mx-auto p-5 shadow-md my-10">

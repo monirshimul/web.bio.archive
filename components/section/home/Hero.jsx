@@ -2,18 +2,28 @@ import databiz from "@/public/img/client-databiz.svg";
 import maker from "@/public/img/client-maker.svg";
 import meet from "@/public/img/client-meet.svg";
 import Profile from "@/public/img/profile.jpg";
+import { fadeIn, staggerContainer } from "@/utils/animations/motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
-
 const Hero = () => {
   const bannerImages = [databiz, meet, maker];
   return (
-    <div className="h-fit w-full bg-slate-50/30 border border-dashed border-gray-100 rounded-lg mx-auto container mt-10 py-5">
+    <motion.div
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.25 }}
+      className="h-fit w-full bg-slate-50/30 border border-dashed border-gray-100 rounded-lg mx-auto container mt-10 py-5"
+    >
       {/* hero */}
       <section className="mx-auto flex max-w-7xl flex-col-reverse gap-2 px-4 pb-12 transition-all md:flex-row md:justify-around md:items-center md:gap-4">
         {/* left div */}
 
-        <div className=" flex flex-col items-center  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left">
+        <motion.div
+          variants={fadeIn("up", "tween", 0.2, 1)}
+          className=" flex flex-col items-center  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left"
+        >
           <h1 className="text-5xl font-bold font-catamaran lg:text-7xl text-neutral-500">
             {/* <Balancer>Mohammad Monirul Islam</Balancer> */}
             <span className="">Mohammad</span>
@@ -43,10 +53,13 @@ const Hero = () => {
               />
             ))}
           </div> */}
-        </div>
+        </motion.div>
 
         {/* right div */}
-        <section className="md:w-1/2 md:relative flex justify-center items-center group cursor-pointer">
+        <motion.section
+          variants={fadeIn("down", "tween", 0.2, 1)}
+          className="md:w-1/2 md:relative flex justify-center items-center group cursor-pointer"
+        >
           <div className="hidden xl:block absolute w-7/12 h-96 bottom-20 opacity-20 right-10 transition-all group-hover:scale-105 duration-1000 group-hover:rotate-180 rounded-xl bg-cyan-400"></div>
           <div className="hidden xl:block absolute w-7/12 h-96 top-20 opacity-20 left-10 transition-all group-hover:scale-105 duration-1000 group-hover:-rotate-180 rounded-xl bg-green-400"></div>
           {/* <div className="hidden xl:block absolute w-7/12 h-96 bottom-20 opacity-20 right-10 transition-all animate-ping rounded-xl bg-cyan-400"></div>
@@ -61,9 +74,9 @@ const Hero = () => {
             src={Profile}
             alt="hreo-image"
           />
-        </section>
+        </motion.section>
       </section>
-    </div>
+    </motion.div>
   );
 };
 

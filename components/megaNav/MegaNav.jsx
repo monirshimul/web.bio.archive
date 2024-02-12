@@ -1,5 +1,7 @@
 "use client";
+import { navVariants } from "@/utils/animations/motion";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
@@ -28,7 +30,12 @@ const MegaNav = () => {
   };
 
   return (
-    <div className="flex bg-transparent backdrop-blur-lg p-4 z-50 sticky top-0 left-0">
+    <motion.div
+      variants={navVariants}
+      initial="hidden"
+      whileInView="show"
+      className="flex bg-transparent backdrop-blur-lg p-4 z-50 sticky top-0 left-0"
+    >
       {/* for logo */}
       <section
         ref={animationParent}
@@ -101,7 +108,7 @@ const MegaNav = () => {
         </div>
         <h5>Drak - Light</h5>
       </section> */}
-    </div>
+    </motion.div>
   );
 };
 
