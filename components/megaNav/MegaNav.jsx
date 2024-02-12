@@ -42,10 +42,17 @@ const MegaNav = () => {
         className="flex justify-between md:justify-center lg:justify-between items-center w-full flex-wrap"
       >
         <Link className="pl-5" href="/">
-          {/* <Image className="" src={Logo} alt="" width={100} height={20} /> */}
-          <h1 className="text-4xl font-extralight text-slate-500">
-            <span className="text-cyan-400 font-extrabold">Z</span>-C
-            <span className="text-orange-400 font-extrabold">O</span>DER
+          {/* <Image
+            className="object-fill"
+            src={Sign}
+            alt=""
+            width={120}
+            height={100}
+          /> */}
+          <h1 className="text-5xl px-5 py-3 transition-all hover:scale-105 font-extralight text-slate-500 hover:text-slate-600 font-yesteryear">
+            {/* <span className="text-cyan-400 font-extrabold">Z</span>-C
+            <span className="text-orange-400 font-extrabold">O</span>DER */}
+            MonirShimul
           </h1>
         </Link>
 

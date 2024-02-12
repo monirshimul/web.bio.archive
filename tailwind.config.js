@@ -20,6 +20,7 @@ module.exports = {
         inter: ["var(--font-inter)"],
         overPass: ["var(--font-overPass)"],
         catamaran: ["var(--font-catamaran)"],
+        yesteryear: ["var(--font-yesteryear)"],
       },
       animation: {
         "spin-slow": "spin 5s linear infinite",
