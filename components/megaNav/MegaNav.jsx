@@ -72,7 +72,7 @@ const MegaNav = () => {
               href={val.link}
               className="group px-2 py-3 transition-all"
             >
-              <div className="flex cursor-pointer items-center gap-2 text-neutral-400 group-hover:text-black dark:group-hover:text-white">
+              <div className="flex cursor-pointer items-center gap-2 text-neutral-400 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white">
                 <span>{val.label}</span>
                 {val.children && (
                   <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
@@ -81,7 +81,7 @@ const MegaNav = () => {
                 {/* Mega Menu ============== */}
 
                 {val.children && (
-                  <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg bg-slate-50 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
+                  <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg dark:border dark:border-slate-700 dark:shadow-xl bg-slate-50 dark:bg-slate-800 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
                     {val.children.map((ch, i) => (
                       <NavMenu key={i} properties={ch} />
                     ))}
@@ -115,8 +115,8 @@ const MegaNav = () => {
             />
           ) : (
             <CiLight
-              size={25}
-              className="cursor-pointer font-bold dark:text-neutral-300"
+              size={30}
+              className="cursor-pointer font-extrabold dark:text-cyan-300 dark:bg-slate-700 dark:rounded-full"
               onClick={() =>
                 dispatch(changeCurrnetTheme({ themeValue: "light" }))
               }

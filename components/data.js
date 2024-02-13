@@ -1,6 +1,39 @@
-import { FcIdea } from "react-icons/fc";
-
+import { BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi";
+import { BsBootstrapFill } from "react-icons/bs";
+import { FaReact } from "react-icons/fa6";
+import { SiNextdotjs, SiReactquery, SiRedux } from "react-icons/si";
 export const navItems = [
+  {
+    label: "Learning",
+    link: "#",
+    children: [
+      {
+        label: "Tailwind",
+        link: "/learning/tailwind",
+        iconImage: <BiLogoTailwindCss size={25} />,
+      },
+      {
+        label: "React",
+        link: "/learning/react",
+        iconImage: <FaReact size={25} />,
+      },
+      {
+        label: "Next",
+        link: "/learning/next",
+        iconImage: <SiNextdotjs size={25} />,
+      },
+      {
+        label: "Redux",
+        link: "/learning/redux",
+        iconImage: <SiRedux size={25} />,
+      },
+      {
+        label: "Reat-Query",
+        link: "#",
+        iconImage: <SiReactquery size={25} />,
+      },
+    ],
+  },
   {
     label: "Projects",
     link: "#",
@@ -8,52 +41,32 @@ export const navItems = [
       {
         label: "Next",
         link: "#",
-        iconImage: <FcIdea />,
+        iconImage: <SiNextdotjs size={25} />,
       },
       {
         label: "React",
         link: "#",
-        iconImage: <FcIdea />,
+        iconImage: <FaReact size={25} />,
       },
       {
         label: "TypeScript",
         link: "#",
         //   iconImage:<FcInspection />
-        iconImage: <FcIdea />,
+        iconImage: <BiLogoTypescript size={25} />,
       },
       {
         label: "Tailwind",
         link: "#",
-        iconImage: <FcIdea />,
+        iconImage: <BiLogoTailwindCss size={25} />,
+      },
+      {
+        label: "Bootstrap 5",
+        link: "#",
+        iconImage: <BsBootstrapFill size={25} />,
       },
     ],
   },
-  {
-    label: "Learning",
-    link: "#",
-    children: [
-      {
-        label: "TailWind",
-        link: "/learning/tailwind",
-        iconImage: <FcIdea />,
-      },
-      {
-        label: "React",
-        link: "/learning/react",
-        iconImage: <FcIdea />,
-      },
-      {
-        label: "Next",
-        link: "/learning/next",
-        iconImage: <FcIdea />,
-      },
-      {
-        label: "Redux",
-        link: "/learning/redux",
-        iconImage: <FcIdea />,
-      },
-    ],
-  },
+
   {
     label: "Experiences",
     link: "",
