@@ -10,7 +10,7 @@ const BehavioralAspect = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="text-3xl antialiased z-20 text-center rounded-xl border border-dashed p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 font-catamaran my-5"
+        className="text-3xl antialiased z-20 text-center rounded-xl border border-dashed dark:border-slate-500 dark:bg-slate-800 p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 dark:text-slate-300 font-catamaran my-5"
       >
         <TypingText title={"Behavioral & Cultural Aspects"} />
       </motion.h1>
@@ -20,7 +20,7 @@ const BehavioralAspect = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="flex flex-col sm:flex-row flex-wrap gap-5 py-5 px-2 border border-dashed justify-center items-center rounded-2xl bg-gray-50"
+        className="flex flex-col sm:flex-row flex-wrap gap-5 py-5 px-2 border border-dashed dark:border-slate-500 justify-center items-center rounded-2xl bg-gray-50 dark:bg-slate-800"
       >
         <BehavioralAspectCard
           gradiant={"bg-gradient-to-br from-rose-500 to-amber-500"}

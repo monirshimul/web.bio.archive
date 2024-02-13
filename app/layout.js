@@ -1,9 +1,9 @@
 import MegaNav from "@/components/megaNav/MegaNav";
 import { Catamaran, Inter, Overpass, Yesteryear } from "next/font/google";
+import { DarkThemeProviders } from "./darkThemeProvider";
 import "./globals.css";
 import { Providers as NextUiProviders } from "./providers";
 import { ReduxProvider } from "./reduxProvider";
-
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -44,9 +44,11 @@ export default function RootLayout({ children }) {
       >
         <ReduxProvider>
           <NextUiProviders>
-            <MegaNav />
-            {/* <Navbar /> */}
-            {children}
+            <DarkThemeProviders>
+              <MegaNav />
+              {/* <Navbar /> */}
+              {children}
+            </DarkThemeProviders>
           </NextUiProviders>
         </ReduxProvider>
       </body>

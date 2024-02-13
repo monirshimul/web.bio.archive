@@ -26,7 +26,7 @@ const TechnicalAspects = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="text-3xl text-center antialiased bg-white rounded-xl border border-dashed p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 font-catamaran my-5"
+        className="text-3xl text-center antialiased dark:text-slate-300 bg-white dark:bg-slate-800 dark:border-slate-500 rounded-xl border border-dashed p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 font-catamaran my-5"
       >
         <TypingText title={"Technical Aspects"} />
       </motion.h1>
@@ -41,13 +41,13 @@ const TechnicalAspects = () => {
         {/* card one */}
         <motion.div
           variants={fadeIn("up", "tween", 0.5, 1)}
-          className="border border-dashed p-5 rounded-2xl shadow"
+          className="border border-dashed p-5 rounded-2xl shadow dark:border-slate-500"
         >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-amber-500 to-rose-500 rounded-md w-full p-3">
             Language
           </h1>
-          <div className="flex flex-col bg-gray-50 sm:flex-row flex-wrap my-2 border border-dashed rounded-2xl p-3 gap-2 justify-center items-center">
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+          <div className="flex flex-col bg-gray-50 dark:bg-slate-800 sm:flex-row flex-wrap my-2 border border-dashed dark:border-slate-500 rounded-2xl p-3 gap-2 justify-center items-center">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <RiJavascriptFill size={25} />
               <p>Javascript</p>
               <CircularProgress
@@ -59,7 +59,7 @@ const TechnicalAspects = () => {
                 valueLabel="70"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <BiLogoTypescript size={25} />
               <p>TypeScript</p>
               <CircularProgress
@@ -71,7 +71,7 @@ const TechnicalAspects = () => {
                 valueLabel="50"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <TbBrandNodejs size={25} />
               <p>Node</p>
               <CircularProgress
@@ -83,7 +83,7 @@ const TechnicalAspects = () => {
                 valueLabel="45"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <FaJava size={25} />
               <p>Java</p>
               <CircularProgress
@@ -100,13 +100,13 @@ const TechnicalAspects = () => {
         {/* card two */}
         <motion.div
           variants={fadeIn("up", "tween", 0.6, 1)}
-          className="border border-dashed p-5 rounded-2xl shadow"
+          className="border border-dashed dark:border-slate-500 p-5 rounded-2xl shadow"
         >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-cyan-500 to-rose-500 rounded-md w-full p-3">
             Framework/Library
           </h1>
-          <div className="flex flex-col bg-gray-50 sm:flex-row flex-wrap my-2 border border-dashed rounded-2xl p-3 gap-2 justify-center items-center">
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+          <div className="flex flex-col bg-gray-50 dark:bg-slate-800 sm:flex-row flex-wrap my-2 dark:border-slate-500 border border-dashed rounded-2xl p-3 gap-2 justify-center items-center">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <FaReact size={25} />
               <p>React</p>
               <CircularProgress
@@ -118,7 +118,7 @@ const TechnicalAspects = () => {
                 valueLabel="75"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <SiNextdotjs size={25} />
               <p>Next</p>
               <CircularProgress
@@ -131,7 +131,7 @@ const TechnicalAspects = () => {
               />
             </span>
 
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <SiRedux size={25} />
               <p>Redux Toolkit</p>
               <CircularProgress
@@ -143,7 +143,7 @@ const TechnicalAspects = () => {
                 valueLabel="60"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <TbBrandReactNative size={25} />
               <p>React Native</p>
               <CircularProgress
@@ -160,13 +160,13 @@ const TechnicalAspects = () => {
         {/* card three */}
         <motion.div
           variants={fadeIn("up", "tween", 0.7, 1)}
-          className="border border-dashed p-5 rounded-2xl shadow"
+          className="border border-dashed p-5 dark:border-slate-500 rounded-2xl shadow"
         >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-purple-500 to-rose-500 rounded-md w-full p-3">
             Other Tools
           </h1>
-          <div className="flex flex-col bg-gray-50 sm:flex-row flex-wrap my-2 border border-dashed rounded-2xl p-3 gap-2 justify-center items-center">
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+          <div className="flex flex-col bg-gray-50 dark:bg-slate-800 dark:border-slate-500 sm:flex-row flex-wrap my-2 border border-dashed rounded-2xl p-3 gap-2 justify-center items-center">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <SiAxios size={25} />
               <p>Axios</p>
               <CircularProgress
@@ -178,7 +178,7 @@ const TechnicalAspects = () => {
                 valueLabel="55"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <SiReactquery size={25} />
               <p>React Query</p>
               <CircularProgress
@@ -191,7 +191,7 @@ const TechnicalAspects = () => {
               />
             </span>
 
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <SiExpress size={25} />
               <p>Express</p>
               <CircularProgress
@@ -203,7 +203,7 @@ const TechnicalAspects = () => {
                 valueLabel="50"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <FaGithub size={25} />
               <p>Github</p>
               <CircularProgress
@@ -221,13 +221,13 @@ const TechnicalAspects = () => {
 
         <motion.div
           variants={fadeIn("up", "tween", 0.8, 1)}
-          className="border border-dashed p-5 rounded-2xl shadow"
+          className="border border-dashed p-5 rounded-2xl dark:border-slate-500 shadow"
         >
           <h1 className=" font-bold text-2xl text-white font-catamaran bg-gradient-to-r from-teal-500 to-pink-500 rounded-md w-full p-3">
             CSS Library
           </h1>
-          <div className="flex flex-col bg-gray-50 sm:flex-row flex-wrap my-2 border border-dashed rounded-2xl p-3 gap-2 justify-center items-center">
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+          <div className="flex flex-col bg-gray-50 dark:bg-slate-800 dark:border-slate-500 sm:flex-row flex-wrap my-2 border border-dashed rounded-2xl p-3 gap-2 justify-center items-center">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <BiLogoTailwindCss size={25} />
               <p>Tailwind</p>
               <CircularProgress
@@ -239,7 +239,7 @@ const TechnicalAspects = () => {
                 valueLabel="65"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <SiMui size={25} />
               <p>Material UI </p>
               <CircularProgress
@@ -251,7 +251,7 @@ const TechnicalAspects = () => {
                 valueLabel="70"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <BsBootstrapFill size={25} />
               <p>Bootstrap</p>
               <CircularProgress
@@ -263,7 +263,7 @@ const TechnicalAspects = () => {
                 valueLabel="60"
               />
             </span>
-            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white  py-2 px-4">
+            <span className="flex shadow-md font-bold text-md text-slate-500 justify-around items-center gap-2 rounded-2xl bg-white dark:bg-slate-700 dark:text-slate-300  py-2 px-4">
               <SiStyledcomponents size={25} />
               <p>Styled Component</p>
               <CircularProgress

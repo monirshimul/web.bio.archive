@@ -18,7 +18,7 @@ const Hero = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="h-fit w-full bg-slate-50/30 border border-dashed border-gray-100 rounded-lg mx-auto container mt-10 py-5"
+      className="h-fit w-full bg-slate-50/30 dark:bg-slate-700/30 border border-dashed border-gray-100 dark:border-slate-500 rounded-lg mx-auto container mt-10 py-5"
     >
       {/* hero */}
       <section className="mx-auto flex max-w-7xl flex-col-reverse gap-2 px-4 pb-12 transition-all md:flex-row md:justify-around md:items-center md:gap-4">
@@ -28,12 +28,12 @@ const Hero = () => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           className=" flex flex-col items-center  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left"
         >
-          <h1 className="text-5xl font-bold font-catamaran lg:text-7xl text-neutral-500">
+          <h1 className="text-5xl font-bold font-catamaran lg:text-7xl text-neutral-500 dark:text-slate-300">
             {/* <Balancer>Mohammad Monirul Islam</Balancer> */}
             <span className="">Mohammad</span>
             <br /> Monirul Islam
           </h1>
-          <p className=" text-neutral-400 md:max-w-[400px]">
+          <p className=" text-neutral-500 dark:text-slate-300 md:max-w-[400px]">
             <Balancer>
               Hey, this is Monirul Islam. Now I’m working as a frontend
               developer at Foxcatcher IT Solution an American based start-up

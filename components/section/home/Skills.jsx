@@ -62,7 +62,7 @@ const dataThree = {
 
 const Skills = (props) => {
   return (
-    <div className="container mx-auto rounded-3xl shadow-md p-5 bg-white">
+    <div className="container mx-auto rounded-3xl shadow-md p-5 bg-white dark:bg-slate-700/40">
       {/* <CallbackAsChildren /> */}
       <motion.div
         variants={staggerContainer}
@@ -72,7 +72,7 @@ const Skills = (props) => {
       >
         <motion.h1
           variants={textVariant(0.5, 2)}
-          className="my-5 text-wrap font-extralight antialiased font-catamaran capitalize text-center py-10 px-5 text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl  bg-slate-50 text-neutral-600"
+          className="my-5 text-wrap dark:bg-slate-800 rounded-2xl font-extralight antialiased font-catamaran capitalize text-center py-10 px-5 text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-8xl 2xl:text-9xl bg-slate-50 dark:shadow-md dark:shadow-cyan-500 text-neutral-600 dark:text-slate-300"
         >
           Some Graph of{" "}
           <span className="font-bold text-wrap bg-clip-text text-transparent bg-gradient-to-r from-cyan-500 to-yellow-500">
@@ -90,23 +90,23 @@ const Skills = (props) => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="border container flex flex-col lg:flex-row flex-wrap justify-center items-center py-10 border-dashed rounded-xl bg-gray-50 gap-5"
+        className=" dark:bg-slate-800 container flex flex-col lg:flex-row flex-wrap justify-center items-center py-10 dark:border-slate-500 rounded-xl bg-gray-50 gap-5"
       >
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
-          className="border p-5 shadow-sm bg-white rounded-xl"
+          className="border dark:shadow-lg dark:shadow-purple-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-cyan-950 rounded-xl"
         >
           <Doughnut data={dataOne} />
         </motion.div>
         <motion.div
           variants={fadeIn("up", "tween", 0.6, 1)}
-          className=" border  p-5 shadow-sm bg-white rounded-xl"
+          className="border dark:shadow-lg dark:shadow-teal-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-sky-950 rounded-xl"
         >
           <Doughnut data={dataTwo} />
         </motion.div>
         <motion.div
           variants={fadeIn("up", "tween", 0.8, 1)}
-          className=" border p-5 shadow-sm bg-white rounded-xl"
+          className="border dark:shadow-lg dark:shadow-pink-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-teal-950 rounded-xl"
         >
           <Doughnut data={dataThree} />
         </motion.div>

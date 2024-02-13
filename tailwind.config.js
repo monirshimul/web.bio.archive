@@ -33,4 +33,5 @@ module.exports = {
     nextui(),
     require("tailwind-scrollbar"),
   ],
+  darkMode: "class",
 };

@@ -1,20 +1,26 @@
 "use client";
-import { navVariants } from "@/utils/animations/motion";
+import { changeCurrnetTheme } from "@/redux/features/setting/SettingSlice";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
+import { CiLight } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
 import { navItems } from "../data";
 import MobileNav from "../mobileNav/MobileNav";
 import NavMenu from "./NavMenu";
 const MegaNav = () => {
+  const dispatch = useDispatch();
   const router = useRouter();
   const pathname = usePathname();
   const [animationParent] = useAutoAnimate();
   const [isSideMenuOpen, setSideMenue] = useState(false);
+  const data = useSelector((state) => state.themeChange.themeName);
+  console.log("theme", data);
   function openSideMenu() {
     setSideMenue(true);
   }
@@ -31,15 +37,15 @@ const MegaNav = () => {
 
   return (
     <motion.div
-      variants={navVariants}
-      initial="hidden"
-      whileInView="show"
-      className="flex bg-transparent backdrop-blur-lg p-4 z-50 sticky top-0 left-0"
+      // variants={navVariants}
+      // initial="hidden"
+      // whileInView="show"
+      className="flex bg-transparent backdrop-blur-lg dark:bg-transparent dark:backdrop-blur-lg p-4 z-50 sticky top-0 left-0"
     >
       {/* for logo */}
       <section
         ref={animationParent}
-        className="flex justify-between md:justify-center lg:justify-between items-center w-full flex-wrap"
+        className="flex justify-center sm:justify-center xl:justify-around items-center w-full flex-wrap"
       >
         <Link className="pl-5" href="/">
           {/* <Image
@@ -49,7 +55,7 @@ const MegaNav = () => {
             width={120}
             height={100}
           /> */}
-          <h1 className="text-5xl px-5 py-3 transition-all hover:scale-105 font-extralight text-slate-500 hover:text-slate-600 font-yesteryear">
+          <h1 className="text-5xl px-5 py-3 transition-all hover:scale-105 font-extralight text-slate-500 dark:text-slate-300 hover:text-slate-600 font-yesteryear">
             {/* <span className="text-cyan-400 font-extrabold">Z</span>-C
             <span className="text-orange-400 font-extrabold">O</span>DER */}
             MonirShimul
@@ -66,7 +72,7 @@ const MegaNav = () => {
               href={val.link}
               className="group px-2 py-3 transition-all"
             >
-              <div className="flex cursor-pointer items-center gap-2 text-neutral-400 group-hover:text-black ">
+              <div className="flex cursor-pointer items-center gap-2 text-neutral-400 group-hover:text-black dark:group-hover:text-white">
                 <span>{val.label}</span>
                 {val.children && (
                   <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
@@ -98,7 +104,25 @@ const MegaNav = () => {
             </Link>
           ))}
         </nav>
-        <div></div>
+        <div className="sm:ml-10 lg:ml-0 xl:ml-5">
+          {data === "light" ? (
+            <MdOutlineDarkMode
+              size={25}
+              className="cursor-pointer font-bold dark:text-neutral-300 bg-gray-100 p-1 rounded-full"
+              onClick={() =>
+                dispatch(changeCurrnetTheme({ themeValue: "dark" }))
+              }
+            />
+          ) : (
+            <CiLight
+              size={25}
+              className="cursor-pointer font-bold dark:text-neutral-300"
+              onClick={() =>
+                dispatch(changeCurrnetTheme({ themeValue: "light" }))
+              }
+            />
+          )}
+        </div>
       </section>
       <FiMenu
         onClick={openSideMenu}
