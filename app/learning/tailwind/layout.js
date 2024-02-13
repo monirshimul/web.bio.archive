@@ -6,7 +6,7 @@ const TailWindLearningLayout = ({ children }) => {
       <SideBarReuseable
         data={Items}
         title={"Tailwind Sidebar Menus"}
-        bg={"bg-green-50"}
+        bg={"bg-green-600"}
       />
       <main className="flex-1">{children}</main>
     </div>

@@ -126,7 +126,7 @@ const MegaNav = () => {
       </section>
       <FiMenu
         onClick={openSideMenu}
-        className="cursor-pointer text-4xl md:hidden"
+        className="cursor-pointer text-4xl md:hidden dark:text-slate-300 mt-5"
       />
       {/* for navmenu */}
       {/* <section className="flex justify-center space-x-5 items-center">

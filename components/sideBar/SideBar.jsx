@@ -45,11 +45,11 @@ const SideBarReuseable = ({ data, title, bg }) => {
     <motion.div
       variants={SideBarOpenCloseVariants}
       animate={showSidebar ? "open" : "closed"}
-      className="w-[16rem] h-screen bg-white border border-dashed p-2 relative"
+      className="w-[16rem] h-screen bg-white dark:bg-slate-800 border border-dashed dark:border-none p-2 relative"
     >
       <div
         onClick={handleSidebar}
-        className="absolute flex justify-center items-center cursor-pointer bg-orange-500 rounded-r-2xl left-[15.2rem] top-5 w-[30px] h-[30px]"
+        className={`absolute flex justify-center items-center cursor-pointer ${bg} rounded-r-2xl left-[15.2rem] top-5 w-[30px] h-[30px]`}
       >
         {showSidebar ? (
           <FaArrowLeft color="white" size={15} />
@@ -57,8 +57,10 @@ const SideBarReuseable = ({ data, title, bg }) => {
           <FaArrowRight color="white" size={15} />
         )}
       </div>
-      <div className={`border-y py-3 border-slate-200 ${bg} shadow-sm`}>
-        <span className="capitalize flex justify-center items-center text-neutral-500 text-medium font-bold font-catamaran">
+      <div
+        className={`border-y py-3 border-slate-200 dark:border-slate-600 shadow-sm`}
+      >
+        <span className="capitalize flex justify-center items-center text-neutral-500 dark:text-slate-300 text-medium font-bold font-catamaran">
           {title}
         </span>
       </div>
@@ -94,17 +96,19 @@ const SideBarReuseable = ({ data, title, bg }) => {
                         height: 0,
                       }
                 }
-                className="flex flex-col overflow-hidden h-0 pl-5 gap-1 bg-neutral-50"
+                className="flex flex-col overflow-hidden h-0 gap-1 bg-neutral-50 dark:bg-slate-800"
               >
                 {item.children?.map((eachChildMenu, childIndex) => (
                   <li
                     key={childIndex}
-                    className={`${
+                    className={` dark:border-none ${
                       pathname === eachChildMenu.link ? "active" : "link"
                     }`}
                   >
                     {eachChildMenu.iconImage}
-                    <Link href={eachChildMenu.link}>{eachChildMenu.label}</Link>
+                    <Link className="" href={eachChildMenu.link}>
+                      {eachChildMenu.label}
+                    </Link>
                   </li>
                 ))}
               </motion.div>

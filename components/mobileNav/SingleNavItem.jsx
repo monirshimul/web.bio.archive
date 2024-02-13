@@ -17,7 +17,7 @@ const SingleNavItem = (props) => {
       href={props.link ?? "#"}
       className="relative px-2 py-3 transition-all "
     >
-      <p className="flex cursor-pointer items-center gap-2 text-neutral-400 group-hover:text-black ">
+      <p className="flex cursor-pointer items-center gap-2 text-lg font-bold dark:text-slate-300 dark:hover:text-cyan-500 text-neutral-400 group-hover:text-black ">
         <span>{props.label}</span>
         {props.children && (
           // rotate-180
@@ -29,12 +29,12 @@ const SingleNavItem = (props) => {
 
       {/* dropdown */}
       {isItemOpen && props.children && (
-        <div className="  w-auto flex-col gap-1 rounded-lg bg-cyan-800  py-3 transition-all flex ">
+        <div className="  w-auto flex-col gap-1 rounded-lg bg-gray-100 dark:bg-slate-700/40  py-3 transition-all flex ">
           {props.children.map((ch, i) => (
             <Link
               key={i}
               href={ch.link ?? "#"}
-              className="flex cursor-pointer items-center  py-1 pl-6 pr-8 text-neutral-400 hover:text-white  "
+              className="flex cursor-pointer items-center text-lg font-bold  py-1 pl-6 pr-8 text-neutral-400 dark:text-slate-300 dark:hover:text-orange-400 hover:text-white  "
             >
               {/* image */}
               {ch.iconImage && ch.iconImage}

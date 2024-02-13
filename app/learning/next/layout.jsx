@@ -7,7 +7,7 @@ const NextLayout = ({ children }) => {
       <SideBarReuseable
         data={Items}
         title={"Sidebar for Next Js"}
-        bg={"bg-teal-50"}
+        bg={"bg-orange-500"}
       />
       <div className="flex-1">{children}</div>
     </div>

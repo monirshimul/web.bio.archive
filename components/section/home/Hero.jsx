@@ -21,8 +21,11 @@ const Hero = () => {
       className="h-fit w-full bg-slate-50/30 dark:bg-slate-700/30 border border-dashed border-gray-100 dark:border-slate-500 rounded-lg mx-auto container mt-10 py-5"
     >
       {/* hero */}
-      <section className="mx-auto flex max-w-7xl flex-col-reverse gap-2 px-4 pb-12 transition-all md:flex-row md:justify-around md:items-center md:gap-4">
+      <section className="relative mx-auto flex max-w-7xl flex-col-reverse gap-2 px-4 pb-12 transition-all md:flex-row md:justify-around md:items-center md:gap-4">
         {/* left div */}
+        <div className="absolute top-0 left-0 w-full h-[100%] opacity-0 md:opacity-25 blur-3xl -z-0">
+          <div className="absolute top-20 left-0 w-[50%] h-[100%] bg-gradient-to-br from-blue-300 to-green-300 [clip-path:circle(50%_at_100%_0)]"></div>
+        </div>
 
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}

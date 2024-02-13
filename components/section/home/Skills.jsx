@@ -94,19 +94,19 @@ const Skills = (props) => {
       >
         <motion.div
           variants={fadeIn("up", "tween", 0.4, 1)}
-          className="border dark:shadow-lg dark:shadow-purple-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-cyan-950 rounded-xl"
+          className="border dark:shadow-md dark:shadow-purple-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-slate-700/40 rounded-xl"
         >
           <Doughnut data={dataOne} />
         </motion.div>
         <motion.div
           variants={fadeIn("up", "tween", 0.6, 1)}
-          className="border dark:shadow-lg dark:shadow-teal-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-sky-950 rounded-xl"
+          className="border dark:shadow-md dark:shadow-teal-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-slate-700/40 rounded-xl"
         >
           <Doughnut data={dataTwo} />
         </motion.div>
         <motion.div
           variants={fadeIn("up", "tween", 0.8, 1)}
-          className="border dark:shadow-lg dark:shadow-pink-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-teal-950 rounded-xl"
+          className="border dark:shadow-md dark:shadow-pink-500 dark:border-slate-500 p-5 shadow-sm bg-white dark:bg-slate-700/40 rounded-xl"
         >
           <Doughnut data={dataThree} />
         </motion.div>
