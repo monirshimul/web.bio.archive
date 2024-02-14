@@ -18,18 +18,26 @@ const Hero = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="h-fit w-full bg-slate-50/30 dark:bg-slate-700/30 border border-dashed border-gray-100 dark:border-slate-500 rounded-lg mx-auto container mt-10 py-5"
+      className="h-fit w-full bg-slate-50/30 dark:bg-slate-700/30 border border-dashed border-gray-100 dark:border-slate-500 relative overflow-hidden rounded-lg mx-auto container mt-10 py-5"
     >
+      <div
+        aria-hidden="true"
+        className="flex absolute -top-96 start-1/2 transform -translate-x-1/2"
+      >
+        <div className="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem] dark:from-purple-900/50 dark:to-cyan-900"></div>
+        <div className="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] dark:from-sky-900/70 dark:via-sky-900/70 dark:to-blue-900/70"></div>
+      </div>
       {/* hero */}
-      <section className="relative mx-auto flex max-w-7xl flex-col-reverse gap-2 px-4 pb-12 transition-all md:flex-row md:justify-around md:items-center md:gap-4">
+      <section className="relative z-10 mx-auto flex max-w-7xl flex-col-reverse gap-2 px-4 pb-12 transition-all md:flex-row md:justify-around md:items-center md:gap-4">
         {/* left div */}
+
         <div className="absolute top-0 left-0 w-full h-[100%] opacity-0 md:opacity-25 blur-3xl -z-0">
           <div className="absolute top-20 left-0 w-[50%] h-[100%] bg-gradient-to-br from-blue-300 to-green-300 [clip-path:circle(50%_at_100%_0)]"></div>
         </div>
 
         <motion.div
           variants={fadeIn("up", "tween", 0.2, 1)}
-          className=" flex flex-col items-center  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left"
+          className=" flex flex-col items-center z-10  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left"
         >
           <h1 className="text-5xl font-bold font-catamaran lg:text-7xl text-neutral-500 dark:text-slate-300">
             {/* <Balancer>Mohammad Monirul Islam</Balancer> */}
