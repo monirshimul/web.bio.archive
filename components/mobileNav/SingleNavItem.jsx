@@ -2,22 +2,24 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Link from "next/link";
 import { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
+
 const SingleNavItem = (props) => {
-  console.log("props", props);
   const [animationParent] = useAutoAnimate();
   const [isItemOpen, setItem] = useState(false);
   function toggleItem() {
     return setItem(!isItemOpen);
   }
 
-  return (
+  return props.access ? (
     <Link
       ref={animationParent}
       onClick={toggleItem}
       href={props.link ?? "#"}
-      className="relative px-2 py-3 transition-all "
+      className="relative px-2 py-3 transition-all"
     >
-      <p className="flex cursor-pointer items-center gap-2 text-lg font-bold dark:text-slate-300 dark:hover:text-cyan-500 text-neutral-400 group-hover:text-black ">
+      <p
+        className={`flex cursor-pointer items-center gap-2 text-lg font-bold dark:text-slate-300 dark:hover:text-cyan-500 text-neutral-400 group-hover:text-black`}
+      >
         <span>{props.label}</span>
         {props.children && (
           // rotate-180
@@ -45,6 +47,8 @@ const SingleNavItem = (props) => {
         </div>
       )}
     </Link>
+  ) : (
+    ""
   );
 };
 

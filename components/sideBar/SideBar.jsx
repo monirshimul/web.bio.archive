@@ -25,7 +25,7 @@ const SideBarOpenCloseVariants = {
 
 const SideBarReuseable = ({ data, title, bg }) => {
   const pathname = usePathname();
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
   const [showSubMenu, setShowSubMenu] = useState(false);
   const [mainData, setMainData] = useState(data || []);
   const handleSidebar = () => {

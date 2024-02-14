@@ -47,7 +47,7 @@ const Hero = () => {
               developing.
             </Balancer>
           </p>
-          <button className="border-balck w-fit rounded-xl border-2 bg-gradient-to-r from-indigo-600 to-pink-600 px-4 py-2  text-white transition-all hover:border-gray-500">
+          <button className="rounded-3xl z-10 bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-2 text-white transition-all cursor-pointer hover:scale-90 shadow-lg shadow-orange-600 hover:shadow-sm">
             Contact Me
           </button>
           {/* <div className="flex gap-2 md:gap-6">

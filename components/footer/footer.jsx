@@ -25,12 +25,12 @@ const Footer = () => {
             </h1> */}
             <div className="mt-4 lg:max-w-sm">
               <p className="text-sm antialiased text-slate-500 dark:text-slate-300">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam.
+                Self-driven, focused and dedicated Software Developer with 4+
+                years of Industrial Experience.
               </p>
               <p className="text-sm antialiased text-slate-500 mt-2 dark:text-slate-300">
-                Eaque ipsa quae ab illo inventore veritatis et quasi architecto
-                beatae vitae dicta sunt explicabo.
+                Fully passionate about programming, developing new products and
+                exploring new Technologies.
               </p>
             </div>
           </div>
@@ -171,16 +171,22 @@ const Footer = () => {
             All rights reserved.
           </p>
           <div className="mt-4 flex items-center space-x-4 sm:mt-0 z-20">
-            <a target="_blank" href="#">
+            <a target="_blank" href="https://www.facebook.com/monir.shimul/">
               <MdFacebook className="w-7 h-fit text-slate-400 hover:text-sky-600 duration-300" />
             </a>
             <a target="_blank" href="https://github.com/monirshimul">
               <FaGithub className="w-7 h-fit text-slate-400 hover:text-sky-500 duration-300" />
             </a>
-            <a target="_blank" href="#">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/@monirshimul/videos"
+            >
               <AiFillYoutube className="w-7 h-fit text-slate-400 hover:text-orange-600 duration-300" />
             </a>
-            <a target="_blank" href="#">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/mohammed-monirul-islam-a88263135/"
+            >
               <FaLinkedin className="w-7 h-fit text-slate-400 hover:text-sky-600 duration-300" />
             </a>
           </div>

@@ -1,5 +1,8 @@
 "use client";
-import { changeCurrnetTheme } from "@/redux/features/setting/SettingSlice";
+import {
+  changeCurrnetTheme,
+  logoutPrivateAccess,
+} from "@/redux/features/setting/SettingSlice";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -10,9 +13,10 @@ import { FiMenu } from "react-icons/fi";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdOutlineDarkMode } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
-import { navItems } from "../data";
+import { useNavData } from "../data";
 import MobileNav from "../mobileNav/MobileNav";
 import NavMenu from "./NavMenu";
+
 const MegaNav = () => {
   const dispatch = useDispatch();
   const router = useRouter();
@@ -20,7 +24,9 @@ const MegaNav = () => {
   const [animationParent] = useAutoAnimate();
   const [isSideMenuOpen, setSideMenue] = useState(false);
   const data = useSelector((state) => state.themeChange.themeName);
-  console.log("theme", data);
+  const access = useSelector((state) => state.themeChange.privateAccess);
+  const navItems = useNavData();
+  console.log("theme", navItems);
   function openSideMenu() {
     setSideMenue(true);
   }
@@ -66,26 +72,27 @@ const MegaNav = () => {
         {isSideMenuOpen && <MobileNav closeSideMenu={closeSideMenu} />}
         {/* navItems */}
         <nav className="hidden relative md:flex items-center gap-4 transition-all ml-16">
-          {navItems.map((val, ind) => (
-            <Link
-              key={ind}
-              href={val.link}
-              className="group px-2 py-3 transition-all"
-            >
-              <div className="flex cursor-pointer items-center gap-2 text-neutral-400 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white">
-                <span>{val.label}</span>
-                {val.children && (
-                  <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
-                )}
+          {navItems.map((val, ind) =>
+            val.access ? (
+              <Link
+                key={ind}
+                href={val.link}
+                className="group px-2 py-3 transition-all"
+              >
+                <div className="flex cursor-pointer items-center gap-2 text-neutral-400 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white">
+                  <span>{val.label}</span>
+                  {val.children && (
+                    <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
+                  )}
 
-                {/* Mega Menu ============== */}
+                  {/* Mega Menu ============== */}
 
-                {val.children && (
-                  <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg dark:border dark:border-slate-700 dark:shadow-xl bg-slate-50 dark:bg-slate-800 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
-                    {val.children.map((ch, i) => (
-                      <NavMenu key={i} properties={ch} />
-                    ))}
-                    {/* {val.children.map((ch, i) => (
+                  {val.children && (
+                    <div className="z-50 absolute left-0 right-0 top-12 hidden w-fit flex-col gap-1 rounded-lg dark:border dark:border-slate-700 dark:shadow-xl bg-slate-50 dark:bg-slate-800 py-5 px-10 shadow-md  transition-all group-hover:flex group-hover:flex-row">
+                      {val.children.map((ch, i) => (
+                        <NavMenu key={i} properties={ch} />
+                      ))}
+                      {/* {val.children.map((ch, i) => (
                       <div
                         key={i}
                         onClick={() => goCertainPage(ch.link)}
@@ -98,13 +105,42 @@ const MegaNav = () => {
                         </span>
                       </div>
                     ))} */}
-                  </div>
-                )}
-              </div>
-            </Link>
-          ))}
+                    </div>
+                  )}
+                </div>
+              </Link>
+            ) : (
+              ""
+            )
+          )}
         </nav>
-        <div className="sm:ml-10 lg:ml-0 xl:ml-5">
+        <div className="sm:ml-10 lg:ml-0 xl:ml-5 flex flex-row gap-2 md:gap-3 w-52 justify-end items-center">
+          {access ? (
+            <>
+              <button className="hidden md:block rounded-2xl w-fit z-10 bg-gradient-to-r from-amber-500 to-orange-600 px-5 py-1 text-white transition-all cursor-pointer hover:scale-90 shadow-lg shadow-orange-600 hover:shadow-sm">
+                <Link
+                  href="/login"
+                  onClick={() => dispatch(logoutPrivateAccess())}
+                >
+                  Logout
+                </Link>
+              </button>
+            </>
+          ) : (
+            <>
+              {pathname !== "/login" ? (
+                <button className="hidden md:block rounded-2xl w-fit z-10 bg-gradient-to-r from-amber-500 to-orange-600 px-5 py-1 text-white transition-all cursor-pointer hover:scale-90 shadow-lg shadow-orange-600 hover:shadow-sm">
+                  <Link href="/login">Login</Link>
+                </button>
+              ) : (
+                ""
+              )}
+            </>
+          )}
+        </div>
+      </section>
+      <div className="flex justify-start items-center gap-3">
+        <div className="xl:mr-20">
           {data === "light" ? (
             <MdOutlineDarkMode
               size={25}
@@ -123,11 +159,11 @@ const MegaNav = () => {
             />
           )}
         </div>
-      </section>
-      <FiMenu
-        onClick={openSideMenu}
-        className="cursor-pointer text-4xl md:hidden dark:text-slate-300 mt-5"
-      />
+        <FiMenu
+          onClick={openSideMenu}
+          className="cursor-pointer text-4xl md:hidden dark:text-slate-300"
+        />
+      </div>
       {/* for navmenu */}
       {/* <section className="flex justify-center space-x-5 items-center">
         <div className="flex relative cursor-pointer items-center gap-2 text-neutral-400 hover:text-black group">
