@@ -41,7 +41,7 @@ const Hero = () => {
         >
           <h1 className="text-5xl font-bold font-catamaran lg:text-7xl text-neutral-500 dark:text-slate-300">
             {/* <Balancer>Mohammad Monirul Islam</Balancer> */}
-            <span className="">Mohammad</span>
+            <span className="">Mohammed</span>
             <br /> Monirul Islam
           </h1>
           <p className=" text-neutral-500 dark:text-slate-300 md:max-w-[400px]">

@@ -80,7 +80,9 @@ const MegaNav = () => {
                 className="group px-2 py-3 transition-all"
               >
                 <div className="flex cursor-pointer items-center gap-2 text-neutral-400 dark:text-slate-300 group-hover:text-black dark:group-hover:text-white">
-                  <span>{val.label}</span>
+                  <span className="flex gap-3 items-center">
+                    {val.iconImage} {val.label}
+                  </span>
                   {val.children && (
                     <IoIosArrowDown className="rotate-180 transition-all group-hover:rotate-0" />
                   )}

@@ -1,6 +1,12 @@
 import Footer from "@/components/footer/footer";
 import MegaNav from "@/components/megaNav/MegaNav";
-import { Catamaran, Inter, Overpass, Yesteryear } from "next/font/google";
+import {
+  Catamaran,
+  Inter,
+  Klee_One,
+  Overpass,
+  Yesteryear,
+} from "next/font/google";
 import { DarkThemeProviders } from "./darkThemeProvider";
 import "./globals.css";
 import { Providers as NextUiProviders } from "./providers";
@@ -29,6 +35,13 @@ const yesteryear = Yesteryear({
   variable: "--font-yesteryear",
 });
 
+const klee_one = Klee_One({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+  display: "swap",
+  variable: "--font-klee_one",
+});
+
 export const metadata = {
   title: "Bio Archive",
   description: "Collection of all works, learnings",
@@ -40,7 +53,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${yesteryear.variable} ${inter.variable} ${
           overPass.variable
-        } ${catamaran.variable} ${
+        } ${catamaran.variable} ${klee_one.variable} ${
           process.env.NODE_ENV == "development" ? "debug-screens" : ""
         }`}
       >

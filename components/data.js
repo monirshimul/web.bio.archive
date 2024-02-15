@@ -3,7 +3,15 @@
 import { BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi";
 import { BsBootstrapFill } from "react-icons/bs";
 import { FaReact } from "react-icons/fa6";
+import { GiArchiveResearch } from "react-icons/gi";
+import { GrAchievement } from "react-icons/gr";
+import {
+  MdCastForEducation,
+  MdContactPhone,
+  MdOutlineWorkHistory,
+} from "react-icons/md";
 import { SiNextdotjs, SiReactquery, SiRedux } from "react-icons/si";
+import { VscFeedback } from "react-icons/vsc";
 import { useSelector } from "react-redux";
 
 export const useNavData = () => {
@@ -11,8 +19,9 @@ export const useNavData = () => {
     useSelector((state) => state.themeChange.privateAccess) || false;
   const navItems = [
     {
-      label: "Learning",
+      label: "Research",
       link: "#",
+      iconImage: <GiArchiveResearch size={25} />,
       access,
       children: [
         {
@@ -43,8 +52,9 @@ export const useNavData = () => {
       ],
     },
     {
-      label: "Projects",
+      label: "Works",
       link: "#",
+      iconImage: <MdOutlineWorkHistory size={25} />,
       access,
       children: [
         {
@@ -77,23 +87,27 @@ export const useNavData = () => {
     },
 
     {
-      label: "Experiences",
-      link: "",
+      label: "Education",
+      link: "#",
+      iconImage: <MdCastForEducation size={25} />,
       access: true,
     },
     {
       label: "Achievement",
       link: "#",
+      iconImage: <GrAchievement size={25} />,
       access: true,
     },
     {
-      label: "Blogs",
-      link: "",
+      label: "Feedback",
+      link: "/feedback",
+      iconImage: <VscFeedback size={25} />,
       access: true,
     },
     {
-      label: "Collections",
-      link: "#",
+      label: "Contact",
+      link: "/contact",
+      iconImage: <MdContactPhone size={25} />,
       access: true,
     },
   ];

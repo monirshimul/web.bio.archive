@@ -21,6 +21,7 @@ module.exports = {
         overPass: ["var(--font-overPass)"],
         catamaran: ["var(--font-catamaran)"],
         yesteryear: ["var(--font-yesteryear)"],
+        klee_one: ["var(--font-klee_one)"],
       },
       animation: {
         "spin-slow": "spin 5s linear infinite",
