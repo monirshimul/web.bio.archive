@@ -88,13 +88,13 @@ export const useNavData = () => {
 
     {
       label: "Education",
-      link: "#",
+      link: "/education",
       iconImage: <MdCastForEducation size={25} />,
       access: true,
     },
     {
       label: "Achievement",
-      link: "#",
+      link: "/achievement",
       iconImage: <GrAchievement size={25} />,
       access: true,
     },
