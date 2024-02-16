@@ -1,7 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 export function DarkThemeProviders({ children }) {
   const data = useSelector((state) => state.themeChange.themeName);
   useEffect(() => {

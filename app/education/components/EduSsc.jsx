@@ -1,6 +1,6 @@
 "use client";
 
-import diploma from "@/public/img/diploma.png";
+import ssc from "@/public/img/ssc.png";
 import {
   ImageVariants,
   fadeIn,
@@ -9,7 +9,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const EduIdb = () => {
+const EduSsc = () => {
   return (
     <motion.div
       variants={staggerContainer}
@@ -24,21 +24,21 @@ const EduIdb = () => {
       >
         <h1 className="text-3xl antialiased bg-white dark:bg-slate-700/40 rounded-xl border border-dashed dark:border-slate-500 text-center lg:text-left text-wrap p-3 my-2 font-bold md:text-4xl lg:text-5xl text-neutral-600 dark:text-slate-300 font-catamaran">
           {/* <TypingText title={""} /> */}
-          IT Scholarship-Diploma
+          Secondary School Certificate
         </h1>
 
         <div className="border border-dashed dark:border-slate-500 p-3 rounded-xl">
           <h1 className="font-bold antialiased text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-fuchsia-500 py-3">
-            IsDB-BISEW
+            Science
           </h1>
           <h3 className="text-3xl font-bold antialiased text-orange-500 font-catamaran">
-            JAVA-J2EE
+            Govt. Bhanga Pilot High School
           </h3>
           <span className="text-2xl dark:text-slate-300 antialiased font-bold text-neutral-600 font-catamaran">
-            2017-2018
+            2005
           </span>
           <p className="font-lg dark:text-slate-300 font-bold antialiased text-neutral-600 font-catamaran">
-            Oracle Certified Java Developer
+            CGPA: 4.50
           </p>
           <p className="font-light antialiased dark:text-slate-300 text-neutral-600 font-catamaran">
             The IsDB-BISEW IT Scholarship Programme commenced in 2003. The
@@ -64,7 +64,7 @@ const EduIdb = () => {
       <motion.div variants={ImageVariants("right")} className="p-10">
         <Image
           className=" cursor-pointer"
-          src={diploma}
+          src={ssc}
           width={500}
           height={500}
           alt="clogo"
@@ -74,4 +74,4 @@ const EduIdb = () => {
   );
 };
 
-export default EduIdb;
+export default EduSsc;

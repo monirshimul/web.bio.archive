@@ -1,6 +1,6 @@
 "use client";
 
-import diploma from "@/public/img/diploma.png";
+import ba from "@/public/img/baTwo.png";
 import {
   ImageVariants,
   fadeIn,
@@ -9,7 +9,7 @@ import {
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const EduIdb = () => {
+const EduBa = () => {
   return (
     <motion.div
       variants={staggerContainer}
@@ -24,27 +24,28 @@ const EduIdb = () => {
       >
         <h1 className="text-3xl antialiased bg-white dark:bg-slate-700/40 rounded-xl border border-dashed dark:border-slate-500 text-center lg:text-left text-wrap p-3 my-2 font-bold md:text-4xl lg:text-5xl text-neutral-600 dark:text-slate-300 font-catamaran">
           {/* <TypingText title={""} /> */}
-          IT Scholarship-Diploma
+          Bachelor Of Arts
         </h1>
 
         <div className="border border-dashed dark:border-slate-500 p-3 rounded-xl">
           <h1 className="font-bold antialiased text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-fuchsia-500 py-3">
-            IsDB-BISEW
+            Literature
           </h1>
           <h3 className="text-3xl font-bold antialiased text-orange-500 font-catamaran">
-            JAVA-J2EE
+            in English
           </h3>
           <span className="text-2xl dark:text-slate-300 antialiased font-bold text-neutral-600 font-catamaran">
-            2017-2018
+            2008-2014
           </span>
           <p className="font-lg dark:text-slate-300 font-bold antialiased text-neutral-600 font-catamaran">
-            Oracle Certified Java Developer
+            National University Of Bangladesh
           </p>
           <p className="font-light antialiased dark:text-slate-300 text-neutral-600 font-catamaran">
-            The IsDB-BISEW IT Scholarship Programme commenced in 2003. The
-            programme has established
-            <br /> itself as a reliable source of IT professionals for
-            recruiters in the country.
+            National University was established by an Act of Parliament as an
+            affiliating University of the country to impart graduate and
+            <br />
+            post-graduate level education to the students through its affiliated
+            colleges and professional institutions throughout the country.
           </p>
         </div>
         <h3 className="text-3xl font-bold antialiased my-3 pl-3 text-sky-500 font-catamaran">
@@ -53,18 +54,21 @@ const EduIdb = () => {
         <div className="relative flex p-3 justify-center">
           {/* <div className="blur-3xl bg-gradient-to-r from-cyan-300 to-yellow-300 w-[100px] h-[100px] rounded-full"></div> */}
           <ul className="bg-gray-50 dark:text-slate-300 dark:bg-slate-700/40 p-5 antialiased rounded-md my-1 text-left text-neutral-500 font-catamaran text-md font-semibold">
-            <li>- JavaScript, AngularJS, Oracle 10g, MySQL, JDBC</li>
-            <li>- UML, JSP, Servlet, JSTL, Hibernate,</li>
+            <li>- Introduction to Drama</li>
+            <li>- Romantic Poetry, 16th & 17th Century Poetry </li>
 
-            <li>- Spring Framework, Spring MVC, Android, Jasper Report.</li>
-            <li>- Successfully completed more than 3 projects</li>
+            <li>- Advanced Reading and Writing</li>
+            <li>- Restoration and Eighteenth Century Poetry and Drama</li>
+            <li>
+              - Victorian Poetry, Restoration and Eighteenth Century Fiction
+            </li>
           </ul>
         </div>
       </motion.div>
       <motion.div variants={ImageVariants("right")} className="p-10">
         <Image
           className=" cursor-pointer"
-          src={diploma}
+          src={ba}
           width={500}
           height={500}
           alt="clogo"
@@ -74,4 +78,4 @@ const EduIdb = () => {
   );
 };
 
-export default EduIdb;
+export default EduBa;

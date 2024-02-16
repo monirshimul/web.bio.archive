@@ -7,6 +7,7 @@ import {
   Overpass,
   Yesteryear,
 } from "next/font/google";
+
 import { DarkThemeProviders } from "./darkThemeProvider";
 import "./globals.css";
 import { Providers as NextUiProviders } from "./providers";
