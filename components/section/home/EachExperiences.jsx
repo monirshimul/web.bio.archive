@@ -1,4 +1,4 @@
-import eraLogo from "@/public/img/era.png";
+import eraLogo from "@/public/img/eraNewLogo.png";
 import foxLogo from "@/public/img/fox.png";
 import {
   fadeIn,

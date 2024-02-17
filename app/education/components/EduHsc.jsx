@@ -53,11 +53,11 @@ const EduHsc = () => {
             CGPA: 4.10
           </p>
           <p className="font-light antialiased dark:text-slate-300 text-neutral-600 font-catamaran">
-            National University was established by an Act of Parliament as an
-            affiliating University of the country to impart graduate and
-            <br />
-            post-graduate level education to the students through its affiliated
-            colleges and professional institutions throughout the country.
+            Government Science College, also known as GSC, is a public higher
+            secondary school as well as a degree college affiliated to the
+            National University. It is one of the oldest educational
+            institutions in Dhaka, Bangladesh established in 1962. It has
+            achieved one of the best Results in Dhaka Board since 2010s.
           </p>
         </div>
         <h3 className="text-3xl font-bold antialiased my-3 pl-3 text-sky-500 font-catamaran">
@@ -66,10 +66,10 @@ const EduHsc = () => {
         <div className="relative flex p-3 justify-center">
           {/* <div className="blur-3xl bg-gradient-to-r from-cyan-300 to-yellow-300 w-[100px] h-[100px] rounded-full"></div> */}
           <ul className="bg-gray-50 dark:text-slate-300 dark:bg-slate-700/40 p-5 antialiased rounded-md my-1 text-left text-neutral-500 font-catamaran text-md font-semibold">
-            <li>- 21st Century American Literatures</li>
-            <li>- Modern Poetry</li>
-            <li>- Modern Drama</li>
-            <li>- Modern Novel</li>
+            <li>- Math, Higher Math</li>
+            <li>- Physics Paper-1,Physics Paper-2</li>
+            <li>- Chemistry Paper-1, Chemistry Paper-2</li>
+            <li>- Biology and Others.</li>
           </ul>
         </div>
       </motion.div>

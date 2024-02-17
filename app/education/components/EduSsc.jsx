@@ -41,10 +41,9 @@ const EduSsc = () => {
             CGPA: 4.50
           </p>
           <p className="font-light antialiased dark:text-slate-300 text-neutral-600 font-catamaran">
-            The IsDB-BISEW IT Scholarship Programme commenced in 2003. The
-            programme has established
-            <br /> itself as a reliable source of IT professionals for
-            recruiters in the country.
+            Bhanga Pilot High School (Bengali: ভাঙ্গা সরকারি পাইলট উচ্চ
+            বিদ্যালয়) also known as Bhanga High School, is an educational
+            institution in Bhanga, Fardipur, Bangladesh established in 1889.
           </p>
         </div>
         <h3 className="text-3xl font-bold antialiased my-3 pl-3 text-sky-500 font-catamaran">
@@ -53,11 +52,10 @@ const EduSsc = () => {
         <div className="relative flex p-3 justify-center">
           {/* <div className="blur-3xl bg-gradient-to-r from-cyan-300 to-yellow-300 w-[100px] h-[100px] rounded-full"></div> */}
           <ul className="bg-gray-50 dark:text-slate-300 dark:bg-slate-700/40 p-5 antialiased rounded-md my-1 text-left text-neutral-500 font-catamaran text-md font-semibold">
-            <li>- JavaScript, AngularJS, Oracle 10g, MySQL, JDBC</li>
-            <li>- UML, JSP, Servlet, JSTL, Hibernate,</li>
-
-            <li>- Spring Framework, Spring MVC, Android, Jasper Report.</li>
-            <li>- Successfully completed more than 3 projects</li>
+            <li>- Math, Higher Math</li>
+            <li>- Physics </li>
+            <li>- Chemistry </li>
+            <li>- Biology and Others.</li>
           </ul>
         </div>
       </motion.div>
