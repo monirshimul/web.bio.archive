@@ -1,8 +1,8 @@
-import Link from "next/link";
+import ReferenceList from "./components/ReferenceList";
 
-const UnderDev = () => {
+const ReferencesPage = () => {
   return (
-    <div className="relative overflow-hidden lg:h-[50vh]">
+    <div className="relative overflow-hidden">
       <div
         aria-hidden="true"
         className="flex absolute -top-96 start-1/2 transform -translate-x-1/2"
@@ -20,29 +20,22 @@ const UnderDev = () => {
 
             <div className="mt-5 max-w-2xl">
               <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
-                Oop! This page is under development
+                References
               </h1>
             </div>
 
             <div className="mt-5 max-w-3xl">
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                Sorry the page content is not finished to show yet.
+                The information of these respected person are using for personal
+                usage.
               </p>
             </div>
-
-            <div className="mt-8 gap-3 flex justify-center">
-              <Link
-                className="rounded-2xl w-fit z-10 bg-gradient-to-r from-amber-500 to-orange-600 px-5 py-1 text-white transition-all cursor-pointer hover:scale-90 shadow-lg shadow-orange-600 hover:shadow-sm"
-                href="/"
-              >
-                Home
-              </Link>
-            </div>
           </div>
+          <ReferenceList />
         </div>
       </div>
     </div>
   );
 };
 
-export default UnderDev;
+export default ReferencesPage;

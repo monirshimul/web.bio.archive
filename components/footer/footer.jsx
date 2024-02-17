@@ -42,28 +42,28 @@ const Footer = () => {
               </p> */}
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/underDev"
                     className="text-slate-500  transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Projects
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/underDev"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Blogs
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/references"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     References
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -74,28 +74,28 @@ const Footer = () => {
               </p> */}
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/underDev"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Learnings
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/underDev"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Collections
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/contact"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -106,28 +106,28 @@ const Footer = () => {
               </p> */}
               <ul className="mt-2 space-y-2">
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/underDev"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Experiences
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/underDev"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Articles
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#"
+                  <Link
+                    href="/underDev"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Archive
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -139,7 +139,7 @@ const Footer = () => {
               <ul className="mt-2 space-y-2">
                 <li>
                   <Link
-                    href="/contact"
+                    href="/underDev"
                     className="text-slate-500 transition-colors duration-300 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-100"
                   >
                     Achievement
