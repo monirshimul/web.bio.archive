@@ -56,7 +56,7 @@ export default function RootLayout({ children }) {
           overPass.variable
         } ${catamaran.variable} ${klee_one.variable} ${
           process.env.NODE_ENV == "development" ? "debug-screens" : ""
-        }`}
+        } `}
       >
         <ReduxProvider>
           <NextUiProviders>

@@ -1,10 +1,14 @@
-import SideBar from "./ui/sideBar/SideBar";
-
+import SideBarReuseable from "@/components/sideBar/SideBar";
+import { Items } from "./data/SidebarData";
 const ReactLearningLayout = ({ children }) => {
   return (
     <div className="flex">
-      <SideBar />
-      <main className="max-w-full flex-1 py-5">{children}</main>
+      <SideBarReuseable
+        data={Items}
+        title={"Sidebar for React"}
+        bg={"bg-purple-500"}
+      />
+      <div className="flex-1 inset-0">{children}</div>
     </div>
   );
 };

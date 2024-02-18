@@ -46,10 +46,10 @@ const SelectsCode = () => {
   };
   console.log(searchResult.length);
   return (
-    <div>
+    <div className="">
       <Headings title={"Selects Prototype Demo Example"} />
-      <section className="container bg-gray-50 p-5">
-        <div className="border rounded-xl p-5 bg-slate-50 border-dashed max-w-3xl mx-auto">
+      <section className="">
+        <div className="border rounded-xl p-5 bg-slate-50 dark:bg-slate-700/40 dark:text-slate-300 border-dashed dark:border-slate-500 w-11/12 lg:w-7/12 mx-auto">
           <Input
             type="text"
             label="Search"
@@ -59,17 +59,18 @@ const SelectsCode = () => {
             onChange={(e) => setValueToState(e)}
             description={alert}
             variant="bordered"
+            className="my-3"
           />
           {/* <Button onClick={resetAll} color="success">
             Reset
           </Button> */}
           {/* list component */}
 
-          <div className="h-[400px] relative">
+          <div className="h-[400px] relative flex justify-center">
             {searchResult.length > 0 ? (
               <ResultList list={searchResult} />
             ) : (
-              <div className="h-[400px] overflow-y-hidden">
+              <div className="h-[400px] overflow-y-hidden ">
                 <Image src={demo} alt="sample" width={750} height={100} />
               </div>
             )}

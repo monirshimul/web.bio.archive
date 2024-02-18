@@ -13,8 +13,8 @@ const dataOne = {
   labels: ["React", "Next", "Javascript", "Node"],
   datasets: [
     {
-      label: "Core Knowledge",
-      data: [300, 50, 100, 50],
+      label: `Core Knowledge`,
+      data: [70, 60, 65, 40],
       backgroundColor: [
         "rgb(255, 99, 132)",
         "rgb(54, 162, 235)",
@@ -31,7 +31,7 @@ const dataTwo = {
   datasets: [
     {
       label: "UI Design Tools",
-      data: [90, 150, 60, 120],
+      data: [70, 65, 60, 65],
       backgroundColor: [
         "rgb(13, 146, 118)",
         "rgb(159, 112, 253)",
@@ -44,11 +44,11 @@ const dataTwo = {
 };
 
 const dataThree = {
-  labels: ["Redux Toolkit", "React Native", "Modern JS", "Blockchain"],
+  labels: ["Redux Toolkit", "React Native", "Modern JS", "Typescript"],
   datasets: [
     {
       label: "React EcoSystem",
-      data: [150, 90, 100, 50],
+      data: [65, 50, 70, 55],
       backgroundColor: [
         "rgb(255, 137, 17)",
         "rgb(153, 188, 133)",

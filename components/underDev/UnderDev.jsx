@@ -20,7 +20,7 @@ const UnderDev = () => {
 
             <div className="mt-5 max-w-2xl">
               <h1 className="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-gray-200">
-                Oop! This page is under development
+                Oops! This page is under development
               </h1>
             </div>
 

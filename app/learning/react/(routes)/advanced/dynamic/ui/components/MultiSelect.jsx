@@ -3,16 +3,16 @@ import Image from "next/image";
 const MultiSelect = () => {
   return (
     <div>
-      <h1 className="bg-gray-50 rounded-lg p-5 my-2 text-neutral-400 text-xl font-bold">
+      <h1 className="bg-gray-50 dark:bg-slate-700/40 dark:text-slate-300 rounded-lg p-5 my-2 text-neutral-400 text-xl font-bold">
         MultiSelects From API
       </h1>
 
-      <div className="bg-gray-50 p-5 mt-2 flex flex-col lg:flex-row items-center">
+      <div className="bg-gray-50 dark:bg-slate-700/40 p-5 mt-2 flex flex-col lg:flex-row items-center">
         <div className="shadow-lg">
           <Image src={demo} width={450} height={250} alt="demoSelect" />
         </div>
         <div className="p-3 flex-1">
-          <p className="text-neutral-400 bg-gray-50 rounded-lg p-5 text-lg font-inter">
+          <p className="text-neutral-400 bg-gray-50 dark:bg-slate-700/40 dark:text-slate-300 rounded-lg p-5 text-lg font-inter">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore,
             culpa dignissimos nobis eius earum expedita laborum molestiae libero
             nemo veniam ab omnis harum temporibus, optio exercitationem corporis
