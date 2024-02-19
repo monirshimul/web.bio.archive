@@ -44,7 +44,7 @@ const klee_one = Klee_One({
 });
 
 export const metadata = {
-  title: "Bio Archive",
+  title: "Bio-Archive",
   description: "Collection of all works, learnings",
 };
 

@@ -78,4 +78,10 @@ export const Items = [
       },
     ],
   },
+  {
+    id: randomId(),
+    label: "Multistep Form",
+    link: "/learning/react/multisteps",
+    iconImage: <BiArchive size={25} />,
+  },
 ];
