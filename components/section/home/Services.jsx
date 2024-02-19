@@ -52,7 +52,8 @@ const Services = () => {
               </span>
             </h1>
             <p className="font-medium text-neutral-600 dark:text-slate-300 font-catamaran p-2">
-              Fareast Tower, 35 Topkhana Road, (Level-3), Dhaka-1000
+              Dedicated web app developer, specialist to cutting-edge
+              technologies
             </p>
             {/* <div className=" absolute bottom-0 right-0 w-[100%] h-[30%] overflow-hidden rounded-full bg-gradient-to-r from-amber-500 to-pink-500 -rotate-45 blur-3xl"></div> */}
           </div>
@@ -74,7 +75,7 @@ const Services = () => {
               UI/UX
             </h1>
             <p className="font-medium text-neutral-600 dark:text-slate-300 font-catamaran p-2">
-              Fareast Tower, 35 Topkhana Road, (Level-3), Dhaka-1000
+              Fullfilling the ui-ux demand with best trend is the main priority
             </p>
           </div>
         </motion.div>
@@ -95,7 +96,8 @@ const Services = () => {
               </span>
             </h1>
             <p className="font-medium text-neutral-600 dark:text-slate-300 font-catamaran p-2">
-              Fareast Tower, 35 Topkhana Road, (Level-3), Dhaka-1000
+              To ensure app perrformance each of the core web vitals are
+              measured
             </p>
           </div>
         </motion.div>
@@ -116,7 +118,8 @@ const Services = () => {
               </span>
             </h1>
             <p className="font-medium text-neutral-600 dark:text-slate-300 font-catamaran p-2">
-              Fareast Tower, 35 Topkhana Road, (Level-3), Dhaka-1000
+              All important metrics of web vitals are followed to produce best
+              optimization.
             </p>
           </div>
         </motion.div>

@@ -25,7 +25,7 @@ const User = () => {
 
         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
           <blockquote>
-            <p className="text-lg font-medium">
+            <p className="text-lg font-medium text-slate-500 dark:text-slate-300">
               {description ? `"${description}"` : " "}
             </p>
           </blockquote>
@@ -50,7 +50,7 @@ const User = () => {
         />
         <div className="pt-6 md:p-8 text-center md:text-left space-y-4">
           <blockquote>
-            <p className="text-lg font-medium text-slate-700">
+            <p className="text-lg font-medium text-slate-700 dark:text-slate-300">
               “Hey, this is Monirul Islam. Now I’m working as a frontend
               developer at Foxcatcher IT Solution an American based start-up
               firm. Previously I worked for Era Infotech LTD, that was my first

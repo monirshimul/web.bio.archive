@@ -45,7 +45,9 @@ const SideBarReuseable = ({ data, title, bg }) => {
     <motion.div
       variants={SideBarOpenCloseVariants}
       animate={showSidebar ? "open" : "closed"}
-      className="w-[16rem] h-screen bg-white dark:bg-slate-800 border border-dashed dark:border-none p-2 relative"
+      className={`${
+        showSidebar ? "min-w-[16rem]" : ""
+      } w-[16rem] h-screen bg-white dark:bg-slate-800 border border-dashed dark:border-none p-2 relative`}
     >
       <div
         onClick={handleSidebar}

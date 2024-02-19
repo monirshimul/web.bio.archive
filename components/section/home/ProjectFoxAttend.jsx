@@ -43,9 +43,10 @@ const ProjectFoxAttend = () => {
           <span className="text-2xl dark:text-slate-300 antialiased font-bold text-neutral-600 font-catamaran">
             2022-2023
           </span>
-          <p className="font-lg dark:text-slate-300 font-bold antialiased text-neutral-600 font-catamaran">
-            Played role as a lead Frontend Developer
+          <p className="font-lg dark:text-slate-400 font-bold antialiased text-neutral-600 font-catamaran">
+            Lead Frontend Developer
           </p>
+
           <p className="font-light dark:text-slate-300 antialiased text-neutral-600 font-catamaran">
             A facial recognition based solution, basically an attendance
             solution that has been
@@ -57,16 +58,23 @@ const ProjectFoxAttend = () => {
           Technologies
         </h1>
         <div className="relative flex justify-between p-3">
-          <div className="blur-3xl bg-gradient-to-r from-cyan-300 to-yellow-300 w-[100px] h-[100px] rounded-full"></div>
-          <ul className="bg-gray-50 dark:bg-slate-700/40 dark:text-slate-300 p-5 antialiased rounded-md my-1 text-right text-neutral-500 font-catamaran text-md font-semibold">
+          <div className="hidden md:block blur-3xl bg-gradient-to-r from-cyan-300 to-yellow-300 w-[100px] h-[100px] rounded-full"></div>
+          <ul className="bg-gray-50 dark:bg-slate-700/40 dark:text-slate-300 p-5 antialiased rounded-md my-1 text-left text-neutral-500 font-catamaran text-md font-semibold">
+            <li>Client App : Next Js</li>
+            <li>CSS Framework : Material UI, Custom CSS</li>
+            <li>App (Server) : TypeScript, Node, Express Js.</li>
+            <li>Version Control : git</li>
+            <li>State Management : redux-toolkit</li>
+            <li>Database : Database Indipendent (TypeORM)</li>
             <li>
-              - In-House Javascript, React, Next Js trainer for RDCD Projects
+              <a
+                target="_blank"
+                href="https://attend-foxcatcherits.com"
+                className="hover:text-orange-500"
+              >
+                Live
+              </a>
             </li>
-            <li>
-              - R&D experience in AI (DNN), Blockchain (Hyperledger Fabric)
-            </li>
-            <li>- Successfully completed more than 4 projects</li>
-            <li>- Play role as a lead frontend developer in 2 projects</li>
           </ul>
         </div>
       </motion.div>

@@ -43,14 +43,16 @@ const PersonalInfo = memo(function PersonalInfo() {
     }
   };
   return (
-    <div className="max-w-7xl mx-auto border-2 border-dashed my-5 p-5 rounded-2xl">
+    <div className="max-w-7xl mx-auto border border-dashed dark:border-slate-500 my-5 p-5 rounded-2xl">
       <Headings
         title={"Provide Your Personal Information"}
-        bg={" bg-orange-50/30"}
+        bg={
+          " bg-orange-50/30 dark:bg-slate-700/40 border-none dark:text-cyan-300"
+        }
       />
       <section className=" grid sm:grid-cols-1 lg:grid-cols-2 gap-4 my-10">
-        <div className="flex flex-col gap-3 bg-slate-50/30 p-5 border border-dashed rounded-lg">
-          <div className="p-5 min-w-fit min-h-fit rounded-md border border-slate-300 border-dashed bg-green-100/60 hover:bg-green-200/60 transition-all">
+        <div className="flex flex-col gap-3 bg-slate-50/30 dark:border-slate-500 dark:bg-slate-700/40 p-5 border border-dashed rounded-lg">
+          <div className="p-5 min-w-fit min-h-fit rounded-md border border-slate-300 dark:border-slate-500 border-dashed bg-green-100/60 dark:bg-slate-700/40 dark:hover:bg-slate-700 hover:bg-green-200/60 transition-all">
             <Image
               src={image ? base64Flag + image : Profile}
               //   src={Profile}
@@ -63,13 +65,13 @@ const PersonalInfo = memo(function PersonalInfo() {
           <input
             type="file"
             onChange={(e) => fileSelectedHandler(e)}
-            className="text-sm p-3 shadow-sm border border-slate-300 border-dashed bg-neutral-100/50 rounded-xl w-2/3 md:w-full mx-auto text-grey-500
+            className="text-sm p-3 shadow-sm border border-slate-300 border-dashed bg-neutral-100/50 rounded-xl w-2/3 md:w-full mx-auto text-grey-500 dark:bg-slate-700/40 dark:text-slate-300 
               file:mr-5 file:py-2 file:px-6
               file:rounded-full file:border-0
-              file:text-sm file:font-medium
-              file:bg-blue-50 file:text-neutral-500 file:shadow-md
+              file:text-sm file:font-medium dark:border-slate-500
+              file:bg-blue-50 file:dark:bg-slate-800 file:dark:text-slate-300 file:text-neutral-500 file:shadow-md
               hover:file:cursor-pointer hover:file:bg-green-50
-              hover:file:text-green-700 transition-all
+              hover:file:text-green-700 hover:file:dark:text-orange-400 transition-all
             "
           />
         </div>

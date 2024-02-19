@@ -31,12 +31,14 @@ const OfficialInfo = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto border-2 border-dashed my-5 p-5 rounded-2xl">
+    <div className="max-w-7xl mx-auto border border-dashed dark:border-slate-500 my-5 p-5 rounded-2xl">
       <Headings
         title={"Provide Your Official Information"}
-        bg={" bg-yellow-50/30"}
+        bg={
+          " bg-yellow-50/30 dark:bg-slate-700/40 border-none dark:text-cyan-300"
+        }
       />
-      <section className="mt-5 border border-dashed rounded-xl p-5 grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <section className="mt-5 border border-dashed dark:border-slate-500 rounded-xl p-5 grid md:grid-cols-2 xl:grid-cols-3 gap-4">
         <Input
           type="text"
           variant="bordered"
@@ -80,7 +82,7 @@ const OfficialInfo = () => {
         <button
           onClick={(e) => localDataSave(e)}
           type="button"
-          className="bg-orange-500 cursor-pointer shadow-md rounded-md w-24 mb-5 ml-2 p-2 scale-90 transition-all duration-700 text-white hover:rounded-3xl hover:scale-100 hover:shadow-xl disabled:bg-gray-200 disabled:cursor-not-allowed disabled:scale-90 disabled:rounded-md"
+          className="bg-orange-500 cursor-pointer shadow-md rounded-md w-24 mb-5 ml-2 p-2 scale-90 transition-all duration-700 dark:shadow-2xl dark:shadow-orange-500 text-white hover:rounded-3xl hover:scale-100 hover:shadow-xl disabled:bg-gray-200 disabled:cursor-not-allowed disabled:scale-90 disabled:rounded-md"
         >
           Submit
         </button>

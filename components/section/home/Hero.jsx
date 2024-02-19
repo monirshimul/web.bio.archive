@@ -9,7 +9,6 @@ import {
 } from "@/utils/animations/motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Balancer from "react-wrap-balancer";
 const Hero = () => {
   const bannerImages = [databiz, meet, maker];
   return (
@@ -39,21 +38,17 @@ const Hero = () => {
           variants={fadeIn("up", "tween", 0.2, 1)}
           className=" flex flex-col items-center z-10  gap-6 pt-8 text-center md:w-1/2 md:items-start md:gap-10 md:pt-32 md:text-left"
         >
-          <h1 className="text-5xl font-bold font-catamaran lg:text-7xl text-neutral-500 dark:text-slate-300">
+          <h1 className="text-5xl font-bold font-klee_one lg:text-7xl text-neutral-500 dark:text-slate-300">
             {/* <Balancer>Mohammad Monirul Islam</Balancer> */}
             <span className="">Mohammed</span>
             <br /> Monirul Islam
           </h1>
           <p className=" text-neutral-500 dark:text-slate-300 md:max-w-[400px]">
-            <Balancer>
-              Hey, this is Monirul Islam. Now I’m working as a frontend
-              developer at Foxcatcher IT Solution an American based start-up
-              firm. Previously I worked for Era Infotech LTD, that was my first
-              job. I have gather 5years of industry experiences from Era till
-              now. At Era I had some R&D experience in AI, Blockchain and so
-              many others modern technologies along side with frontend
-              developing.
-            </Balancer>
+            Hey, this is Monirul Islam. I’m working as a Lead frontend developer
+            at Foxcatcher IT Solution. Previously I worked for Era Infotech LTD.
+            I have gather almost 5years of industry experiences till now. Love
+            to work with modern technologies along side with frontend
+            developing.
           </p>
           <button className="rounded-3xl z-10 bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-2 text-white transition-all cursor-pointer hover:scale-90 shadow-lg shadow-orange-600 hover:shadow-sm">
             Contact Me

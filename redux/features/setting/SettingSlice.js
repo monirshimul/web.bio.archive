@@ -14,7 +14,7 @@ const themeSetting = createSlice({
 
     providePrivateAccess: (state, action) => {
       const { userName, pinCode } = action.payload;
-      if (userName === "monir" && pinCode === "Monir@1234") {
+      if (userName === "admin" && pinCode === "1234") {
         state.privateAccess = true;
       }
     },

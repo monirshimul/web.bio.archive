@@ -10,7 +10,7 @@ const BehavioralAspect = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.25 }}
-        className="text-3xl antialiased z-20 text-center rounded-xl border border-dashed dark:border-slate-500 dark:bg-slate-800 p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 dark:text-slate-300 font-catamaran my-5"
+        className="text-xl antialiased z-20 text-center rounded-xl border border-dashed dark:border-slate-500 dark:bg-slate-800 p-2 font-bold md:text-6xl lg:text-5xl xl:text-7xl text-slate-600 dark:text-slate-300 font-catamaran my-5 text-wrap"
       >
         <TypingText title={"Behavioral & Cultural Aspects"} />
       </motion.h1>

@@ -1,3 +1,5 @@
+"use client";
+import amarPro from "@/public/img/amarPro.PNG";
 import AmaarProperty from "@/public/img/pbWeb.png";
 import {
   ImageVariants,
@@ -7,20 +9,24 @@ import {
 import { TypingText } from "@/utils/custom/CustomText";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useSelector } from "react-redux";
 const ProjectAmarProperty = () => {
+  const data = useSelector((state) => state.themeChange.themeName);
   return (
     <motion.div
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.25 }}
-      className="flex flex-col-reverse gap-5 lg:flex-row justify-around items-center bg-slate-50/30 rounded-2xl my-3 p-5 dark:bg-slate-800"
+      className="flex flex-col-reverse gap-5 lg:flex-row justify-around items-center bg-slate-50/30 dark:bg-slate-800 rounded-2xl my-3 p-5"
     >
       <motion.div
         variants={fadeIn("up", "spring", 0.5, 1)}
-        className="flex shadow-sm flex-col bg-slate-50/30 dark:bg-slate-800 dark:border-slate-500 border border-dashed rounded-2xl p-5"
+        className="flex shadow-sm flex-col bg-slate-50/30 dark:bg-slate-800 border border-dashed rounded-2xl p-5 dark:border-slate-500
+        w-[100vw] sm:w-11/12 2xl:w-6/12
+        "
       >
-        <h1 className="text-3xl antialiased bg-white dark:bg-slate-700/40 rounded-xl border border-dashed dark:border-slate-500 p-2 my-2 font-bold md:text-4xl lg:text-5xl text-neutral-600 dark:text-slate-300 font-catamaran">
+        <h1 className="text-3xl antialiased bg-white dark:bg-slate-700/40 dark:border-slate-500 dark:text-slate-300  rounded-xl border border-dashed p-2 my-2 font-bold md:text-4xl lg:text-5xl text-neutral-600 font-catamaran">
           <TypingText title={"Amaar Property"} />
         </h1>
 
@@ -31,30 +37,38 @@ const ProjectAmarProperty = () => {
           <span className="text-2xl dark:text-slate-300 antialiased font-bold text-neutral-600 font-catamaran">
             2022-2023
           </span>
-          <p className="font-lg dark:text-slate-300 font-bold antialiased text-neutral-600 font-catamaran">
-            Played role as a lead Frontend Developer
+          <p className="font-lg dark:text-slate-400 font-bold antialiased text-neutral-600 font-catamaran">
+            lead Frontend Developer
           </p>
-          <p className="font-light antialiased dark:text-slate-300 text-neutral-600 font-catamaran">
-            A facial recognition based solution, basically an attendance
-            solution that has been
+          <p className="font-light dark:text-slate-300 antialiased text-neutral-600 font-catamaran">
+            A solution for property management in Bangladesh with all other
+            residential facilities.
             <br />
-            made for all categories organization.
+            Aim to manage each module of property preservation business with
+            modern facilities and technologies.
           </p>
         </div>
-        <h1 className="font-bold antialiased text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-fuchsia-500 text-center pt-5">
+        <h1 className="font-bold antialiased text-3xl sm:text-4xl md:text-5xl lg:text-7xl xl:text-8xl bg-clip-text text-transparent bg-gradient-to-r from-rose-500 to-yellow-500 text-center pt-5">
           Technologies
         </h1>
         <div className="relative flex justify-between p-3">
-          <div className="blur-3xl bg-gradient-to-r from-cyan-300 to-yellow-300 w-[100px] h-[100px] rounded-full"></div>
-          <ul className="bg-gray-50 dark:text-slate-300 dark:bg-slate-700/40 p-5 antialiased rounded-md my-1 text-right text-neutral-500 font-catamaran text-md font-semibold">
+          <div className="hidden md:block blur-3xl bg-gradient-to-r from-cyan-300 to-yellow-300 w-[100px] h-[100px] rounded-full"></div>
+          <ul className="bg-gray-50 dark:bg-slate-700/40 dark:text-slate-300 p-5 antialiased rounded-md my-1 text-left text-neutral-500 font-catamaran text-md font-semibold">
+            <li>Client App : Next Js</li>
+            <li>CSS Framework : Tailwind CSS, Custom CSS</li>
+            <li>App (Server) : TypeScript, Node, Express Js.</li>
+            <li>Version Control : git</li>
+            <li>State Management : redux-toolkit</li>
+            <li>Database : Database Indipendent (TypeORM)</li>
             <li>
-              - In-House Javascript, React, Next Js trainer for RDCD Projects
+              <a
+                target="_blank"
+                href="https://pb-web-static.vercel.app/"
+                className="hover:text-orange-500"
+              >
+                Demo
+              </a>
             </li>
-            <li>
-              - R&D experience in AI (DNN), Blockchain (Hyperledger Fabric)
-            </li>
-            <li>- Successfully completed more than 4 projects</li>
-            <li>- Play role as a lead frontend developer in 2 projects</li>
           </ul>
         </div>
       </motion.div>
@@ -64,7 +78,7 @@ const ProjectAmarProperty = () => {
       >
         <Image
           className=" cursor-pointer"
-          src={AmaarProperty}
+          src={data === "light" ? AmaarProperty : amarPro}
           width={750}
           height={650}
           alt="clogo"
