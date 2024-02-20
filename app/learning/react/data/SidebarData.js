@@ -84,4 +84,10 @@ export const Items = [
     link: "/learning/react/multisteps",
     iconImage: <BiArchive size={25} />,
   },
+  {
+    id: randomId(),
+    label: "axios",
+    link: "/learning/react/axios",
+    iconImage: <BiArchive size={25} />,
+  },
 ];
