@@ -1,13 +1,22 @@
 {
-  "posts": [
-    { "id": "1", "title": "a title", "views": 100 },
-    { "id": "2", "title": "another title", "views": 200 }
-  ],
-  "comments": [
-    { "id": "1", "text": "a comment about post 1", "postId": "1" },
-    { "id": "2", "text": "another comment about post 1", "postId": "1" }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "certification": [
+    {
+      "id": "1",
+      "title": "React: Server-Side Rendering",
+      "issuer": "LinkedIn",
+      "date": "October 11, 2021",
+      "subTitle": "LinkedIn Learning Certificate",
+      "description": "LinkedIn Learning Certificate of Completion",
+      "url": "https://www.linkedin.com/learning/certificates/6cc802a181e85b2b7de4663c87334824f69d897ab5f81451e462797ce68daa83?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B7fcIWsAMR8mIA447jgA0lQ%3D%3D"
+    },
+    {
+      "id": "2",
+      "title": "React: Software Architecture",
+      "issuer": "LinkedIn",
+      "date": "October 02, 2021",
+      "subTitle": "LinkedIn Learning Certificate",
+      "description": "LinkedIn Learning Certificate of Completion",
+      "url": "https://www.linkedin.com/learning/certificates/99fbbced373886fc7976b01d85330a52d600774f4e022bef72766c98f6a15125?trk=backfilled_certificate&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3B7fcIWsAMR8mIA447jgA0lQ%3D%3D"
+    }
+  ]
 }
