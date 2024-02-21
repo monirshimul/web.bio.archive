@@ -22,18 +22,20 @@ const BasicInfo = () => {
     <div className="">
       <Headings
         title={"Provide Your Basic Information"}
-        bg={" bg-cyan-50/30"}
+        bg={
+          " bg-cyan-50/30 dark:bg-slate-700/40 dark:border-slate-500 dark:text-slate-300"
+        }
       />
 
       <section className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 my-10 mx-3">
         <div>
-          <span class="block text-sm font-medium text-slate-500 mb-1">
+          <span className="block text-sm font-medium text-slate-500 mb-1">
             First Name
           </span>
           <input
             type="text"
             placeholder="Ex. Monirul"
-            className="block w-full px-3 py-3 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+            className="block w-full px-3 py-3 bg-white dark:border-slate-500 dark:bg-slate-700/40  border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
             value={firstName}
             name="firstName"
             onChange={(e) => basicInfoHandle(e)}
@@ -41,13 +43,13 @@ const BasicInfo = () => {
         </div>
 
         <div>
-          <span class="block text-sm font-medium text-slate-500 mb-1">
+          <span className="block text-sm font-medium text-slate-500 mb-1">
             Last Name
           </span>
           <input
             type="text"
             placeholder="Ex. Islam"
-            className="block w-full px-3 py-3 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+            className="block w-full px-3 py-3 bg-white dark:border-slate-500 dark:bg-slate-700/40  border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
             value={lastName}
             name="lastName"
             onChange={(e) => basicInfoHandle(e)}
@@ -55,13 +57,13 @@ const BasicInfo = () => {
         </div>
 
         <div>
-          <span class="block text-sm font-medium text-slate-500 mb-1">
+          <span className="block text-sm font-medium text-slate-500 mb-1">
             Email
           </span>
           <input
             type="email"
             placeholder="example@sample.com"
-            className="block w-full px-3 py-3 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+            className="block w-full px-3 py-3 bg-white border-slate-300 rounded-md dark:border-slate-500 dark:bg-slate-700/40 border text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
             value={email}
             name="email"
             onChange={(e) => basicInfoHandle(e)}

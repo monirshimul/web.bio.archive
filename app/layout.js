@@ -12,6 +12,7 @@ import { DarkThemeProviders } from "./darkThemeProvider";
 import "./globals.css";
 import { Providers as NextUiProviders } from "./providers";
 import { ReduxProvider } from "./reduxProvider";
+import TanQueryClientProvider from "./TanQueryClientProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -61,10 +62,12 @@ export default function RootLayout({ children }) {
         <ReduxProvider>
           <NextUiProviders>
             <DarkThemeProviders>
-              <MegaNav />
-              {/* <Navbar /> */}
-              {children}
-              <Footer />
+              <TanQueryClientProvider>
+                <MegaNav />
+                {/* <Navbar /> */}
+                {children}
+                <Footer />
+              </TanQueryClientProvider>
             </DarkThemeProviders>
           </NextUiProviders>
         </ReduxProvider>

@@ -13,9 +13,11 @@ const OfficialInfo = () => {
     <div>
       <Headings
         title={"Provide Your Official Information"}
-        bg={" bg-yellow-50/30"}
+        bg={
+          " bg-yellow-50/30 dark:bg-slate-700/40 dark:border-slate-500 dark:text-slate-300"
+        }
       />
-      <section className="mt-5 border p-5 grid md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <section className="mt-5 border dark:border-slate-500 rounded-2xl p-5 grid md:grid-cols-2 xl:grid-cols-3 gap-4">
         <Input
           type="text"
           variant="bordered"

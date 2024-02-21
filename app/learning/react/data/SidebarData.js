@@ -1,11 +1,9 @@
-import {
-  BiAddToQueue,
-  BiArchive,
-  BiCodeBlock,
-  BiLogoTailwindCss,
-  BiSpreadsheet,
-} from "react-icons/bi";
-import { TbBrandFramerMotion } from "react-icons/tb";
+import { BiLogoTailwindCss, BiSpreadsheet } from "react-icons/bi";
+import { FaWpforms } from "react-icons/fa6";
+import { GiMagickTrick } from "react-icons/gi";
+import { RiLockPasswordFill } from "react-icons/ri";
+import { SiAxios, SiReactquery } from "react-icons/si";
+import { TbBrandFramerMotion, TbPasswordFingerprint } from "react-icons/tb";
 let randomId = () => {
   let ids = Math.random() * 100;
   let newId = Math.round(ids);
@@ -38,43 +36,43 @@ export const Items = [
       },
     ],
   },
-  {
-    id: randomId(),
-    label: "Hooks",
-    link: "#",
-    iconImage: <BiAddToQueue size={25} />,
-    children: [
-      {
-        id: randomId(),
-        label: "useCallback",
-        link: "/learning/react/hooks/useCallback",
-        iconImage: <BiArchive size={25} />,
-      },
-      {
-        id: randomId(),
-        label: "useMemo",
-        link: "/learning/react/hooks/useMemo",
-        iconImage: <BiCodeBlock size={25} />,
-      },
-    ],
-  },
+  // {
+  //   id: randomId(),
+  //   label: "Hooks",
+  //   link: "#",
+  //   iconImage: <BiAddToQueue size={25} />,
+  //   children: [
+  //     {
+  //       id: randomId(),
+  //       label: "useCallback",
+  //       link: "/learning/react/hooks/useCallback",
+  //       iconImage: <BiArchive size={25} />,
+  //     },
+  //     {
+  //       id: randomId(),
+  //       label: "useMemo",
+  //       link: "/learning/react/hooks/useMemo",
+  //       iconImage: <BiCodeBlock size={25} />,
+  //     },
+  //   ],
+  // },
   {
     id: randomId(),
     label: "Tricky",
     link: "/learning/react/advanced/tricky",
-    iconImage: <BiAddToQueue size={25} />,
+    iconImage: <GiMagickTrick size={25} />,
     children: [
       {
         id: randomId(),
         label: "otpGen",
         link: "/learning/react/advanced/tricky/otpGen",
-        iconImage: <BiArchive size={25} />,
+        iconImage: <TbPasswordFingerprint size={25} />,
       },
       {
         id: randomId(),
         label: "passGen",
         link: "/learning/react/advanced/tricky/passGen",
-        iconImage: <BiCodeBlock size={25} />,
+        iconImage: <RiLockPasswordFill size={25} />,
       },
     ],
   },
@@ -82,12 +80,18 @@ export const Items = [
     id: randomId(),
     label: "Multistep Form",
     link: "/learning/react/multisteps",
-    iconImage: <BiArchive size={25} />,
+    iconImage: <FaWpforms size={25} />,
   },
   {
     id: randomId(),
     label: "axios",
     link: "/learning/react/axios",
-    iconImage: <BiArchive size={25} />,
+    iconImage: <SiAxios size={25} />,
+  },
+  {
+    id: randomId(),
+    label: "React Query",
+    link: "/learning/react/react-query",
+    iconImage: <SiReactquery size={25} />,
   },
 ];

@@ -14,6 +14,8 @@
     "@formkit/auto-animate": "^0.8.1",
     "@nextui-org/react": "^2.2.9",
     "@reduxjs/toolkit": "^2.1.0",
+    "@tanstack/react-query": "^5.22.2",
+    "@tanstack/react-query-devtools": "^5.24.0",
     "axios": "^1.6.5",
     "chart.js": "^4.4.1",
     "framer-motion": "^10.18.0",
@@ -32,6 +34,7 @@
     "tailwindcss-debug-screens": "^2.2.1"
   },
   "devDependencies": {
+    "@tanstack/eslint-plugin-query": "^5.20.1",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",

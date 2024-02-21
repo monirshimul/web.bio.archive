@@ -18,9 +18,9 @@ const LeftMenuList = ({ name, icon }) => {
         onClick={() => changeType(name)}
         className={`${
           name === type
-            ? "bg-green-50 text-green-600 "
-            : "bg-neutral-50 text-neutral-400 "
-        }p-2 hover:bg-green-50/30 transition-all shadow-sm pt-3 text-lg font-semibold flex gap-5 justify-between items-start pl-5 cursor-pointer`}
+            ? "bg-green-50 dark:bg-orange-400 dark:hover:bg-orange-500 text-orange-600 dark:text-slate-50 "
+            : "bg-neutral-50 dark:bg-slate-700/40 text-neutral-400 dark:text-slate-300 "
+        }p-2 hover:bg-green-50/30 dark:hover:bg-slate-700 transition-all shadow-sm pt-3 text-lg font-semibold flex gap-5 justify-between items-start pl-5 cursor-pointer`}
       >
         <div className="flex gap-5">
           {icon}

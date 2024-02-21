@@ -14,11 +14,13 @@ const PersonalInfo = () => {
     <div>
       <Headings
         title={"Provide Your Personal Information"}
-        bg={" bg-orange-50/30"}
+        bg={
+          " bg-orange-50/30 dark:bg-slate-700/40 dark:border-slate-500 dark:text-slate-300"
+        }
       />
       <section className="grid sm:grid-cols-1 lg:grid-cols-2 gap-4 my-10 mx-3">
-        <div className="flex flex-col gap-3 bg-slate-50/30 p-5 border border-dashed rounded-lg">
-          <div className="p-5 min-w-fit min-h-fit rounded-md border border-slate-300 border-dashed bg-orange-100/30">
+        <div className="flex flex-col gap-3 bg-slate-50/30 dark:bg-slate-700/40 dark:border-slate-500 p-5 border border-dashed rounded-lg">
+          <div className="p-5 min-w-fit min-h-fit rounded-md border border-slate-300 dark:border-slate-500 border-dashed bg-orange-100/30 dark:bg-slate-700">
             <Image
               src={image ? flag + image : Profile}
               alt="profile"
@@ -30,11 +32,11 @@ const PersonalInfo = () => {
           <input
             type="file"
             onChange={(e) => fileSelectedHandler(e)}
-            className="text-sm p-3 shadow-sm border border-slate-300 border-dashed bg-neutral-100/50 rounded-xl w-2/3 md:w-full mx-auto text-grey-500
+            className="text-sm p-3 shadow-sm border border-slate-300 border-dashed dark:border-slate-500 bg-neutral-100/50 dark:bg-slate-600 rounded-xl w-2/3 md:w-full mx-auto text-grey-500
             file:mr-5 file:py-2 file:px-6
             file:rounded-full file:border-0
             file:text-sm file:font-medium
-            file:bg-blue-50 file:text-neutral-500 file:shadow-md
+            file:bg-blue-50 dark:file:bg-slate-700 file:text-neutral-500 dark:file:text-slate-300 file:shadow-md
             hover:file:cursor-pointer hover:file:bg-green-50
             hover:file:text-green-700 transition-all
           "

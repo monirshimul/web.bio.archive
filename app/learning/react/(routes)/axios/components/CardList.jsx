@@ -10,8 +10,8 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 import { useRef, useState } from "react";
-import { LuFileEdit } from "react-icons/lu";
-import { RiChatDeleteLine } from "react-icons/ri";
+import { TiDeleteOutline } from "react-icons/ti";
+import { VscEdit } from "react-icons/vsc";
 const CardList = (props) => {
   const titleRef = useRef(null);
   const descriptionRef = useRef(null);
@@ -20,8 +20,20 @@ const CardList = (props) => {
   const urlRef = useRef(null);
   const dateRef = useRef(null);
 
-  const { title, description, issuer, subTitle, url, date, deleteCert } = props;
+  const {
+    title,
+    description,
+    issuer,
+    subTitle,
+    url,
+    date,
+    id,
+    deleteCert,
+    updateCert,
+  } = props;
+  console.log("id", id);
   const [updateValue, setUpdateValue] = useState({
+    _id: id,
     _title: title,
     _description: description,
     _issuer: issuer,
@@ -40,6 +52,10 @@ const CardList = (props) => {
       ...updateValue,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const submitAllUpdateData = () => {
+    updateCert(updateValue);
   };
   //   console.log("updateValue", updateValue);
   const { _title, _description, _issuer, _subTitle, _url, _date } = updateValue;
@@ -65,15 +81,12 @@ const CardList = (props) => {
           </a>
         </p>
         <div className="flex flex-row gap-3 justify-end items-center p-3 bg-slate-100 dark:bg-slate-700/40 rounded-2xl">
-          <LuFileEdit
+          <VscEdit
             onClick={onOpen}
             className="cursor-pointer text-orange-500"
-            size={30}
+            size={25}
           />
-          <RiChatDeleteLine
-            className="cursor-pointer text-rose-500"
-            size={30}
-          />
+          <TiDeleteOutline className="cursor-pointer text-rose-500" size={30} />
         </div>
       </div>
 
@@ -176,7 +189,11 @@ const CardList = (props) => {
                 <Button color="danger" variant="light" onPress={onClose}>
                   Close
                 </Button>
-                <Button color="success" variant="light" onPress={onClose}>
+                <Button
+                  color="success"
+                  variant="light"
+                  onClick={submitAllUpdateData}
+                >
                   Update
                 </Button>
               </ModalFooter>

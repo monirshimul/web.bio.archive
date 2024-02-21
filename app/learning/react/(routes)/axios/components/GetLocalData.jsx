@@ -59,6 +59,16 @@ const GetLocalData = () => {
 
   const removeCert = (id) => {};
 
+  const updateCert = async (value) => {
+    console.log("update value", value);
+    try {
+      let res = await axios.patch(`certification/${value._id}`);
+      console.log("response", res);
+    } catch (err) {
+      console.log("err", err);
+    }
+  };
+
   return (
     <div className="container mx-auto bg-slate-50 rounded-2xl dark:bg-slate-700/40 p-3">
       <h1 className="text-center text-2xl flex justify-center gap-5 md:justify-between items-center lg:text-4xl md:px-10 font-bold font-klee_one text-slate-500 dark:text-slate-300">
@@ -78,7 +88,12 @@ const GetLocalData = () => {
         {response.length > 0 ? (
           <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-3 bg-slate-50/30 rounded-2xl my-3 p-3 dark:bg-slate-800 justify-center">
             {response.map((value, ind) => (
-              <CardList {...value} key={ind} deleteCert={removeCert} />
+              <CardList
+                {...value}
+                key={ind}
+                deleteCert={removeCert}
+                updateCert={updateCert}
+              />
             ))}
           </div>
         ) : (

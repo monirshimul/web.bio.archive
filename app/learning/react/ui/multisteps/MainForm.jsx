@@ -89,7 +89,7 @@ const MainForm = () => {
     return view[type];
   };
 
-  console.log("personalInfoHandle", personalInfo);
+  // console.log("personalInfoHandle", personalInfo);
   return (
     <MainContext.Provider
       value={{
@@ -104,22 +104,24 @@ const MainForm = () => {
         personalInfoHandle,
       }}
     >
-      <section className="w-full bg-slate-50/30 max-w-screen-2xl mt-5">
-        <h1 className="border-b p-5 text-3xl text-neutral-600 font-bold font-catamaran">
+      <section className="w-full xl:p-5 container mx-auto rounded-2xl bg-slate-50/30 border border-dashed dark:border-slate-500 dark:bg-slate-700/40 max-w-screen-2xl mt-5">
+        <h1 className="border-b dark:border-slate-500 p-5 text-3xl text-neutral-600 dark:text-slate-300 font-bold font-catamaran">
           Multisteps Form
         </h1>
         {/* tab sections */}
 
-        <section className="flex flex-col xl:flex-row bg-slate-50/30 h-fit py-5 px-2 mx-auto gap-2">
+        <section className="flex flex-col xl:flex-row dark:bg-slate-800 h-fit py-5 px-2 mx-auto gap-2">
           {/* left Side */}
           {/* md:w-2/4 xl:w-1/4 h-fit bg-white p-3 gap-2 */}
-          <div className="w-full grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-1 xl:w-2/5 h-fit bg-white p-3 gap-2">
+          <div className="w-full grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-1 xl:w-2/5 h-fit bg-white dark:bg-slate-700/40 p-3 gap-2">
             <LeftMenuList name="Basic" icon={<GrCloudDownload size={25} />} />
             <LeftMenuList name="Personal" icon={<FaLocationDot size={25} />} />
             <LeftMenuList name="Official" icon={<FaUserGear size={25} />} />
           </div>
           {/* right side */}
-          <div className="w-full h-fit bg-white">{changeView()}</div>
+          <div className="w-full h-fit bg-white dark:bg-slate-800">
+            {changeView()}
+          </div>
         </section>
       </section>
     </MainContext.Provider>
