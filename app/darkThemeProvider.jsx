@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 export function DarkThemeProviders({ children }) {
@@ -13,5 +15,10 @@ export function DarkThemeProviders({ children }) {
     }
   }, [data]);
   console.log("dark provider", data);
-  return <div className={`${data} dark:bg-slate-800`}>{children}</div>;
+  return (
+    <div className={`${data} dark:bg-slate-800`}>
+      {children}
+      <ToastContainer />
+    </div>
+  );
 }

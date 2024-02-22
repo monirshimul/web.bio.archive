@@ -3,3 +3,4 @@
 export const mainUrl = "https://my-json-server.typicode.com/monirshimul/mydb/";
 
 export const certification = `${mainUrl}certification`;
+export const products = `${mainUrl}products`;

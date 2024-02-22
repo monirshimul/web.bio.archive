@@ -3,7 +3,6 @@
 import { fadeIn, staggerContainer } from "@/utils/animations/motion";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { inputMaker } from "./data";
 // const testData = {
 //   id: 1,
 //   title: "React: Server-Side Rendering",
@@ -14,24 +13,8 @@ import { inputMaker } from "./data";
 //   url: "",
 // };
 
-const AddCert = ({ addNewCert }) => {
-  const [inputVal, setInputVal] = useState(inputMaker);
-  //   const [formVal, setFormVal] = useState(
-  //     Object.keys(testData)
-  //       .filter((v) => v !== "id")
-  //       .reduce((ac, a) => ({ ...ac, [a]: "" }), {})
-  //   );
-  //   console.log("fields", formVal);
-
-  //   let name = ["monir", "shimul", "kobir"];
-  //   let con = name.reduce((prev, val) => {
-  //     return {
-  //       ...prev,
-  //       [val]: "",
-  //     };
-  //   }, {});
-  //   console.log(con);
-
+const TypeTextForm = ({ addNew, feedData, heading }) => {
+  const [inputVal, setInputVal] = useState(feedData);
   const handleInputVal = (e, i, arr) => {
     arr[i].value = e.target.value;
     setInputVal([...arr]);
@@ -49,8 +32,15 @@ const AddCert = ({ addNewCert }) => {
     let checkValue = Object.values(resizedVal).every(Boolean);
     console.log("checkValue", checkValue);
 
-    (checkValue && addNewCert(resizedVal)) ||
+    if (checkValue) {
+      addNew(resizedVal);
+      inputVal.map((data, ind, arr) => {
+        data.value = "";
+        setInputVal([...arr]);
+      });
+    } else {
       alert("Please fill-up all the value");
+    }
   };
 
   return (
@@ -61,6 +51,9 @@ const AddCert = ({ addNewCert }) => {
       viewport={{ once: false, amount: 0.25 }}
       className="container mx-auto rounded-2xl bg-slate-50 dark:bg-slate-700/40 p-5 my-5 border border-dashed dark:border-slate-500"
     >
+      <h1 className="text-4xl pt-5 font-bold font-catamaran p-2 text-slate-500 dark:text-slate-300">
+        {heading}
+      </h1>
       <motion.div variants={fadeIn("up", "tween", 0.3, 0.5)}>
         <form
           onSubmit={(e) => submitForm(e)}
@@ -90,4 +83,4 @@ const AddCert = ({ addNewCert }) => {
   );
 };
 
-export default AddCert;
+export default TypeTextForm;

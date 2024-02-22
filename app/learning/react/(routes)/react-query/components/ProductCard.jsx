@@ -3,7 +3,6 @@ import { TiDeleteOutline } from "react-icons/ti";
 import { VscEdit } from "react-icons/vsc";
 const ProductCard = ({ product }) => {
   const {
-    id,
     title,
     brand,
     category,
