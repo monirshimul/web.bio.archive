@@ -1,4 +1,10 @@
-import { BiLogoTailwindCss, BiSpreadsheet } from "react-icons/bi";
+import {
+  BiAddToQueue,
+  BiArchive,
+  BiCodeBlock,
+  BiLogoTailwindCss,
+  BiSpreadsheet,
+} from "react-icons/bi";
 import { FaWpforms } from "react-icons/fa6";
 import { GiMagickTrick } from "react-icons/gi";
 import { RiLockPasswordFill } from "react-icons/ri";
@@ -36,26 +42,26 @@ export const Items = [
       },
     ],
   },
-  // {
-  //   id: randomId(),
-  //   label: "Hooks",
-  //   link: "#",
-  //   iconImage: <BiAddToQueue size={25} />,
-  //   children: [
-  //     {
-  //       id: randomId(),
-  //       label: "useCallback",
-  //       link: "/learning/react/hooks/useCallback",
-  //       iconImage: <BiArchive size={25} />,
-  //     },
-  //     {
-  //       id: randomId(),
-  //       label: "useMemo",
-  //       link: "/learning/react/hooks/useMemo",
-  //       iconImage: <BiCodeBlock size={25} />,
-  //     },
-  //   ],
-  // },
+  {
+    id: randomId(),
+    label: "Hooks",
+    link: "#",
+    iconImage: <BiAddToQueue size={25} />,
+    children: [
+      {
+        id: randomId(),
+        label: "useCallback",
+        link: "/learning/react/hooks/useCallback",
+        iconImage: <BiArchive size={25} />,
+      },
+      {
+        id: randomId(),
+        label: "useMemo",
+        link: "/learning/react/hooks/useMemo",
+        iconImage: <BiCodeBlock size={25} />,
+      },
+    ],
+  },
   {
     id: randomId(),
     label: "Tricky",

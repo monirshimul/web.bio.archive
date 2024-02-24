@@ -1,5 +1,5 @@
 "use client";
-import { useContext } from "react";
+import { memo, useContext } from "react";
 import {
   MdDoubleArrow,
   MdKeyboardDoubleArrowDown,
@@ -7,7 +7,7 @@ import {
 } from "react-icons/md";
 import { useMediaQuery } from "react-responsive";
 import { MainContext } from "./MainForm";
-const LeftMenuList = ({ name, icon }) => {
+const LeftMenuList = memo(function LeftMenuList({ name, icon }) {
   let isTabletMid = useMediaQuery({ query: "(max-width: 1279px)" });
   let { type, changeType, status } = useContext(MainContext);
   let { Basic, Official, Personal } = status;
@@ -48,6 +48,6 @@ const LeftMenuList = ({ name, icon }) => {
       </div>
     </>
   );
-};
+});
 
 export default LeftMenuList;

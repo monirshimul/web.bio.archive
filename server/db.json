@@ -69,17 +69,6 @@
       "category": "smartphones",
       "thumbnail": "https://cdn.dummyjson.com/product-images/3/thumbnail.jpg",
       "images": ["https://cdn.dummyjson.com/product-images/3/1.jpg"]
-    },
-    {
-      "title": "iPhone 9",
-      "brand": "Samsung ",
-      "category": "Tab",
-      "description": "No More Fingerprint Devices for Attendance.",
-      "price": "125",
-      "rating": "4.5",
-      "stock": "30",
-      "thumbnail": "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg",
-      "id": 4
     }
   ]
 }

@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 import { FaLocationDot, FaUserGear } from "react-icons/fa6";
 import { GrCloudDownload } from "react-icons/gr";
 import BasicInfo from "./BasicInfo";
@@ -38,6 +38,7 @@ const MainForm = () => {
       [e.target.name]: e.target.value,
     });
   };
+  console.log("Main Form Rerendered....");
 
   const personalInfoHandle = (e) => {
     console.log("e radio", e.target.name);
@@ -79,7 +80,8 @@ const MainForm = () => {
     }
   };
 
-  const changeView = () => {
+  const changeView = useMemo(() => {
+    console.log("changeView is called");
     let view = {
       Basic: <BasicInfo />,
       Personal: <PersonalInfo />,
@@ -87,7 +89,17 @@ const MainForm = () => {
     };
 
     return view[type];
-  };
+  }, [type]);
+  // const changeView = () => {
+  //   console.log("changeView is called");
+  //   let view = {
+  //     Basic: <BasicInfo />,
+  //     Personal: <PersonalInfo />,
+  //     Official: <OfficialInfo />,
+  //   };
+
+  //   return view[type];
+  // };
 
   // console.log("personalInfoHandle", personalInfo);
   return (
@@ -120,7 +132,7 @@ const MainForm = () => {
           </div>
           {/* right side */}
           <div className="w-full h-fit bg-white dark:bg-slate-800">
-            {changeView()}
+            {changeView}
           </div>
         </section>
       </section>
