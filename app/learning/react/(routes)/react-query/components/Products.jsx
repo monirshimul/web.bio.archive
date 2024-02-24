@@ -77,7 +77,7 @@ const Products = () => {
           heading={"Add New Product"}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 bg-slate-50/30 rounded-2xl my-3 p-3 dark:bg-slate-800">
-          {data?.map((product, index) => (
+          {data?.products.map((product, index) => (
             <div key={index}>
               <Suspense fallback={<CardListSkleton />}>
                 <ProductCard product={product} />
