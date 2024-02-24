@@ -27,9 +27,9 @@ const Products = () => {
         "Access-Control-Allow-Origin": "*",
       },
     };
-    // let res = await axios.post(`${products}/add`, formData, axiosConfig);
-    let res = await axios.post(products, formData);
-    setProductData([...productData, res?.data]);
+    let res = await axios.post(`${products}/add`, formData, axiosConfig);
+    // let res = await axios.post(products, formData);
+    // setProductData([...productData, res?.data]);
     toast("Product has been Created");
     //only for myjson-server============
     data.unshift(res?.data);
