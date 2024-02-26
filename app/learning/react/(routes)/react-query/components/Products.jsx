@@ -1,8 +1,8 @@
 "use client";
 
 import TypeTextForm from "@/app/learning/react/ui/components/TypeTextForm";
-import { products } from "@/utils/URL/url";
-// import { productsVercel } from "@/utils/URL/url";
+// import { products } from "@/utils/URL/url";
+import { productsVercel } from "@/utils/URL/url";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { Suspense, useState } from "react";
@@ -17,7 +17,7 @@ const Products = () => {
 
   const [productData, setProductData] = useState([]);
   let getProducts = async () => {
-    let res = await axios.get(`${products}`);
+    let res = await axios.get(`${productsVercel}`);
     console.log("get pro", res.data);
     return res?.data;
   };
@@ -30,7 +30,7 @@ const Products = () => {
     };
     // let res = await axios.post(`${products}/add`, formData, axiosConfig);
 
-    let res = await axios.post(products, formData);
+    let res = await axios.post(productsVercel, formData);
     // setProductData([...productData, res?.data]);
     toast("Product has been Created");
     console.log("after add", res);

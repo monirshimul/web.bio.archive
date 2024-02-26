@@ -1,5 +1,6 @@
 "use client";
-import { certification } from "@/utils/URL/url";
+// import { certification } from "@/utils/URL/url";
+import { certificationVercel } from "@/utils/URL/url";
 import randomId from "@/utils/custom/IdGen";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -24,7 +25,7 @@ const GetLocalData = () => {
     let getData = async () => {
       setLoading(true);
       try {
-        let res = await axios.get(certification);
+        let res = await axios.get(certificationVercel);
         console.log("recalling after adding data", res);
         setResponse(res?.data);
         setLoading(false);
@@ -46,7 +47,7 @@ const GetLocalData = () => {
     setLoading(true);
     console.log("mod", modData);
     try {
-      let res = await axios.post(certification, modData);
+      let res = await axios.post(certificationVercel, modData);
       setResponse([...response, res?.data]);
       setSignal(randomId());
       setLoading(false);
@@ -62,7 +63,7 @@ const GetLocalData = () => {
   const updateCert = async (value) => {
     console.log("update value", value);
     try {
-      let res = await axios.patch(`certification/${value._id}`);
+      let res = await axios.patch(`certificationVercel/${value._id}`);
       console.log("response", res);
     } catch (err) {
       console.log("err", err);

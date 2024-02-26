@@ -70,7 +70,7 @@ const DeferredCode = () => {
               width="500"
               className="object-contain h-[250px] w-[350px]"
             />
-            <p className="text-wrap text-md text-slate-600 dark:text-slate-300 font-normal font-klee_one antialiased p-2">
+            <p className="text-wrap text-md text-slate-600 dark:text-slate-300 font-normal font-catamaran antialiased p-2">
               <Headings title={"Explaination from Doc"} />
               <br />
               useDeferredValue is a React Hook that lets you defer (বিলম্ব করা)
@@ -85,7 +85,7 @@ const DeferredCode = () => {
               <br />
             </p>
           </div>
-          <p className="text-wrap text-md text-slate-600 dark:text-slate-300 font-normal font-klee_one antialiased p-2">
+          <p className="text-wrap text-md text-slate-600 dark:text-slate-300 font-normal font-catamaran antialiased p-2">
             The values you pass to useDeferredValue should either be primitive
             values (like strings and numbers) or objects created outside of
             rendering. If you create a new object during rendering and
