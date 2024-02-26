@@ -14,8 +14,8 @@ const MemoCode = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col lg:flex-row gap-3 justify-center items-start">
-        <div className="bg-slate-50 rounded-2xl p-3 dark:bg-slate-700/40">
-          <p className="text-slate-700 font-catamaran antialiased dark:text-slate-300 text-lg font-semibold ">
+        <div className="bg-slate-50 rounded-2xl p-3 dark:bg-slate-700/40 w-11/12 lg:w-6/12">
+          <p className="text-slate-700 text-wrap font-catamaran antialiased dark:text-slate-300 text-lg font-semibold ">
             useMemo hook can be used for caching the return value of a function,
             that is not to be recalculated or rerendered every time the
             component rerendered. We just wrap any function with useMemo hook
@@ -24,7 +24,7 @@ const MemoCode = () => {
             array.
           </p>
         </div>
-        <div className="p-5 bg-slate-100 rounded-2xl dark:bg-slate-700/40">
+        <div className="p-5 w-11/12 lg:w-6/12 bg-slate-100 rounded-2xl dark:bg-slate-700/40">
           <SyntaxHighlighter language="js" style={atomOneDarkReasonable}>
             {codeString}
           </SyntaxHighlighter>

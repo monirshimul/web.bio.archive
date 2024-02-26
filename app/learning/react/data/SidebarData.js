@@ -60,6 +60,24 @@ export const Items = [
         link: "/learning/react/hooks/useMemo",
         iconImage: <BiCodeBlock size={25} />,
       },
+      {
+        id: randomId(),
+        label: "useReducer",
+        link: "/learning/react/hooks/useReducer",
+        iconImage: <BiCodeBlock size={25} />,
+      },
+      {
+        id: randomId(),
+        label: "useTransition",
+        link: "/learning/react/hooks/useTransition",
+        iconImage: <BiCodeBlock size={25} />,
+      },
+      {
+        id: randomId(),
+        label: "useDeferredValue",
+        link: "/learning/react/hooks/useDeferredValue",
+        iconImage: <BiCodeBlock size={25} />,
+      },
     ],
   },
   {

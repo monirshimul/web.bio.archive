@@ -2,6 +2,7 @@
 
 import TypeTextForm from "@/app/learning/react/ui/components/TypeTextForm";
 import { products } from "@/utils/URL/url";
+// import { productsVercel } from "@/utils/URL/url";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { Suspense, useState } from "react";
@@ -27,10 +28,12 @@ const Products = () => {
         "Access-Control-Allow-Origin": "*",
       },
     };
-    let res = await axios.post(`${products}/add`, formData, axiosConfig);
-    // let res = await axios.post(products, formData);
+    // let res = await axios.post(`${products}/add`, formData, axiosConfig);
+
+    let res = await axios.post(products, formData);
     // setProductData([...productData, res?.data]);
     toast("Product has been Created");
+    console.log("after add", res);
     //only for myjson-server============
     data.unshift(res?.data);
     return res?.data;
@@ -77,7 +80,7 @@ const Products = () => {
           heading={"Add New Product"}
         />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-3 bg-slate-50/30 rounded-2xl my-3 p-3 dark:bg-slate-800">
-          {data?.products.map((product, index) => (
+          {data?.map((product, index) => (
             <div key={index}>
               <Suspense fallback={<CardListSkleton />}>
                 <ProductCard product={product} />
