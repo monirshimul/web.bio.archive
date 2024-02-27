@@ -16,37 +16,38 @@ let randomId = () => {
   let newId = Math.round(ids);
   return newId;
 };
+let iconSize = 15;
 export const Items = [
   {
     id: randomId(),
     label: "Dark Theme",
     link: "",
-    iconImage: <BiEqualizer />,
+    iconImage: <BiEqualizer size={iconSize} />,
   },
 
   {
     id: randomId(),
     label: "Flex Box",
     link: "#",
-    iconImage: <LuServerCog />,
+    iconImage: <LuServerCog size={iconSize} />,
   },
   {
     id: randomId(),
     label: "Projects",
     link: "/learning/next/projects",
-    iconImage: <BiSpreadsheet />,
+    iconImage: <BiSpreadsheet size={iconSize} />,
     children: [
       {
         id: randomId(),
         label: "With Framer Motion",
         link: "/learning/next/projects/withFramerMotion",
-        iconImage: <TbBrandFramerMotion />,
+        iconImage: <TbBrandFramerMotion size={iconSize} />,
       },
       {
         id: randomId(),
         label: "With Tailwind",
         link: "/learning/next/projects/withTailwind",
-        iconImage: <BiLogoTailwindCss />,
+        iconImage: <BiLogoTailwindCss size={iconSize} />,
       },
     ],
   },
@@ -54,43 +55,43 @@ export const Items = [
     id: randomId(),
     label: "Theming",
     link: "#",
-    iconImage: <FaUsersViewfinder />,
+    iconImage: <FaUsersViewfinder size={iconSize} />,
   },
   {
     id: randomId(),
     label: "Grid",
     link: "",
-    iconImage: <LuDatabaseBackup />,
+    iconImage: <LuDatabaseBackup size={iconSize} />,
   },
   {
     id: randomId(),
     label: "Works",
     link: "#",
-    iconImage: <BiAddToQueue />,
+    iconImage: <BiAddToQueue size={iconSize} />,
     children: [
       {
         id: randomId(),
         label: "Server Component",
         link: "",
-        iconImage: <BiArchive />,
+        iconImage: <BiArchive size={iconSize} />,
       },
       {
         id: randomId(),
         label: "Client Component",
         link: "",
-        iconImage: <BiCodeBlock />,
+        iconImage: <BiCodeBlock size={iconSize} />,
       },
       {
         id: randomId(),
         label: "SSG",
         link: "",
-        iconImage: <BiCloudUpload />,
+        iconImage: <BiCloudUpload size={iconSize} />,
       },
       {
         id: randomId(),
         label: "SSR",
         link: "",
-        iconImage: <BiDetail />,
+        iconImage: <BiDetail size={iconSize} />,
       },
     ],
   },

@@ -47,7 +47,7 @@ const SideBarReuseable = ({ data, title, bg }) => {
       animate={showSidebar ? "open" : "closed"}
       className={`${
         showSidebar ? "min-w-[16rem]" : ""
-      } w-[16rem] h-screen bg-white dark:bg-slate-800 border border-dashed dark:border-none p-2 relative`}
+      } w-[16rem] h-screen bg-white dark:bg-slate-800 p-2 relative`}
     >
       <div
         onClick={handleSidebar}
@@ -60,13 +60,13 @@ const SideBarReuseable = ({ data, title, bg }) => {
         )}
       </div>
       <div
-        className={`border-y py-3 border-slate-200 dark:border-slate-600 shadow-sm`}
+        className={`border-y border-dashed py-3 border-slate-100 dark:border-slate-600 shadow-md`}
       >
         <span className="capitalize flex justify-center items-center text-neutral-500 dark:text-slate-300 text-medium font-bold font-catamaran">
           {title}
         </span>
       </div>
-      <div>
+      <div className="">
         <ul className="flex flex-col gap-1 py-2">
           {mainData.map((item, index, mainArray) => (
             <div key={index} className="flex flex-col">
@@ -98,12 +98,12 @@ const SideBarReuseable = ({ data, title, bg }) => {
                         height: 0,
                       }
                 }
-                className="flex flex-col overflow-hidden h-0 gap-1 bg-neutral-50 dark:bg-slate-800"
+                className="flex flex-col overflow-hidden h-0 gap-0.5"
               >
                 {item.children?.map((eachChildMenu, childIndex) => (
                   <li
                     key={childIndex}
-                    className={` dark:border-none ${
+                    className={` dark:border-none ml-2 ${
                       pathname === eachChildMenu.link ? "active" : "link"
                     }`}
                   >

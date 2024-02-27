@@ -16,24 +16,25 @@ let randomId = () => {
   let newId = Math.round(ids);
   return newId;
 };
+let iconSize = 15;
 export const Items = [
   {
     id: randomId(),
     label: "Projects",
     link: "/learning/next/projects",
-    iconImage: <BiSpreadsheet size={25} />,
+    iconImage: <BiSpreadsheet size={iconSize} />,
     children: [
       {
         id: randomId(),
         label: "With Framer Motion",
         link: "/learning/next/projects/withFramerMotion",
-        iconImage: <TbBrandFramerMotion size={25} />,
+        iconImage: <TbBrandFramerMotion size={iconSize} />,
       },
       {
         id: randomId(),
         label: "With Tailwind",
         link: "/learning/next/projects/withTailwind",
-        iconImage: <BiLogoTailwindCss size={25} />,
+        iconImage: <BiLogoTailwindCss size={iconSize} />,
       },
     ],
   },
@@ -41,31 +42,31 @@ export const Items = [
     id: randomId(),
     label: "Topics",
     link: "#",
-    iconImage: <BiAddToQueue size={25} />,
+    iconImage: <BiAddToQueue size={iconSize} />,
     children: [
       {
         id: randomId(),
         label: "Server Component",
         link: "",
-        iconImage: <BiArchive size={25} />,
+        iconImage: <BiArchive size={iconSize} />,
       },
       {
         id: randomId(),
         label: "Client Component",
         link: "",
-        iconImage: <BiCodeBlock size={25} />,
+        iconImage: <BiCodeBlock size={iconSize} />,
       },
       {
         id: randomId(),
         label: "SSG",
         link: "",
-        iconImage: <BiCloudUpload size={25} />,
+        iconImage: <BiCloudUpload size={iconSize} />,
       },
       {
         id: randomId(),
         label: "SSR",
         link: "",
-        iconImage: <BiDetail size={25} />,
+        iconImage: <BiDetail size={iconSize} />,
       },
     ],
   },
@@ -73,24 +74,24 @@ export const Items = [
     id: randomId(),
     label: "Data Fetching",
     link: "",
-    iconImage: <BiEqualizer size={25} />,
+    iconImage: <BiEqualizer size={iconSize} />,
   },
   {
     id: randomId(),
     label: "Rendering",
     link: "#",
-    iconImage: <FaUsersViewfinder size={25} />,
+    iconImage: <FaUsersViewfinder size={iconSize} />,
   },
   {
     id: randomId(),
     label: "Caching",
     link: "",
-    iconImage: <LuDatabaseBackup size={25} />,
+    iconImage: <LuDatabaseBackup size={iconSize} />,
   },
   {
     id: randomId(),
     label: "Server Actions",
     link: "#",
-    iconImage: <LuServerCog size={25} />,
+    iconImage: <LuServerCog size={iconSize} />,
   },
 ];
