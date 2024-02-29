@@ -64,7 +64,7 @@ export const useNavData = () => {
         },
         {
           label: "React",
-          link: "#",
+          link: "/works/react",
           iconImage: <FaReact size={25} />,
         },
         {

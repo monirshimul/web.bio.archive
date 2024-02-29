@@ -47,24 +47,24 @@ const SideBarReuseable = ({ data, title, bg }) => {
       animate={showSidebar ? "open" : "closed"}
       className={`${
         showSidebar ? "min-w-[16rem]" : ""
-      } w-[16rem] h-screen bg-white dark:bg-slate-800 p-2 relative`}
+      } w-[16rem] h-screen bg-white dark:bg-slate-800 p-2 sticky top-24 left-0 z-40 bg-transparent backdrop-blur-lg dark:bg-transparent dark:backdrop-blur-lg`}
     >
       <div
-        onClick={handleSidebar}
-        className={`absolute flex justify-center items-center cursor-pointer ${bg} rounded-r-2xl left-[15.2rem] top-5 w-[30px] h-[30px]`}
-      >
-        {showSidebar ? (
-          <FaArrowLeft color="white" size={15} />
-        ) : (
-          <FaArrowRight color="white" size={15} />
-        )}
-      </div>
-      <div
-        className={`border-y border-dashed py-3 border-slate-100 dark:border-slate-600 shadow-md`}
+        className={`border-y relative border-dashed py-3 border-slate-100 dark:border-slate-600 shadow-md`}
       >
         <span className="capitalize flex justify-center items-center text-neutral-500 dark:text-slate-300 text-medium font-bold font-catamaran">
           {title}
         </span>
+        <div
+          onClick={handleSidebar}
+          className={`absolute flex justify-center items-center cursor-pointer ${bg} rounded-r-2xl left-[15rem] top-3 w-[30px] h-[30px]`}
+        >
+          {showSidebar ? (
+            <FaArrowLeft color="white" size={15} />
+          ) : (
+            <FaArrowRight color="white" size={15} />
+          )}
+        </div>
       </div>
       <div className="">
         <ul className="flex flex-col gap-1 py-2">
